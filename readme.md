@@ -13,9 +13,11 @@ VexFlow backed MusicXML parser
 
 ### 3
 how abcjs parse MusicXML and render page
-abcjs 库本身并不直接支持解析 MusicXML 格式文件，它主要用于解析和渲染 ABC 格式的乐谱。然而，你可以借助其他库将 MusicXML 文件转换为 ABC 格式，然后再使用 abcjs 来进行乐谱的渲染。
+
+abcjs 库本身并不直接支持解析 MusicXML 格式文件， 它主要用于解析和渲染 ABC 格式的乐谱。
+然而，你可以借助其他库将 MusicXML 文件转换为 ABC 格式，然后再使用 abcjs 来进行乐谱的渲染。
 
 
 ### 4
-https://opensheetmusicdisplay.github.io/demo/
-https://github.com/opensheetmusicdisplay/opensheetmusicdisplay
+demo [https://opensheetmusicdisplay.github.io/demo/]
+github [https://github.com/opensheetmusicdisplay/opensheetmusicdisplay]
