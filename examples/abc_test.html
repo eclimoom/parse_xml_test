@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="musicScore"></div>
+
+<!-- 引入 abcjs 相关资源 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/7.1.0/abcjs_basic_7.1.0-min.js"></script>
+<!-- 引入 musicjson 库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/musicjson/0.1.0/musicjson.min.js"></script>
+  <script>
+    // 读取MusicXML文件，这里仅为示例，请根据你的实际情况读取文件内容
+    var musicxmlData = '<score-partwise version="3.1"></score-partwise>'; // 这里用示例的空白MusicXML数据，需替换为实际的MusicXML内容
+
+    // 将MusicXML转换为JSON格式
+    var json = musicjson.xmlToJson(musicxmlData);
+
+    // 将JSON格式转换为ABC格式
+    var abcData = musicjson.jsonToABC(json);
+
+    // 创建绘制音符图谱的选项
+    var visualOptions = {
+    scale: 1.5, // 音符图谱的放大倍数，可以根据需要调整
+    staffwidth: 600 // 音符图谱的宽度，可以根据需要调整
+  };
+
+    // 在指定容器中绘制音符图谱
+    var musicScoreContainer = document.getElementById('musicScore');
+    var renderParams = {
+    add_classes: true
+  };
+
+    abcjs.renderAbc(musicScoreContainer, abcData, visualOptions, renderParams);
+</script>
+</body>
+</html>
