@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,viewport-fit=cover">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,viewport-fit=cover">
     <title></title>
-    
+
 </head>
 <body>
-<div >
+<div>
     <div class="title"></div>
-    <div id="wrapper" class="wrapper" >
-        <div id="svg_output" >
+    <div id="wrapper" class="wrapper">
+        <div id="svg_output">
         </div>
     </div>
 </div>
-<script src="js/jquery-3.1.1.min.js" type="text/javascript" ></script>
+<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
 <script src="js/verovio-toolkit-3.13.0.js" type="text/javascript"></script>
 <script src="js/midi.js" type="text/javascript"></script>
 </body>
 </html>
 <script type="text/javascript">
-    
-    var vrvToolkit = null;// new verovio.toolkit();
-    var midisong,option,notes;
 
-    $( document ).ready(function() {
+    var vrvToolkit = null;// new verovio.toolkit();
+
+    $(document).ready(function () {
         vrvToolkit = new verovio.toolkit();
-        loadFile("2.musicxml");
+        loadFile("./assets/2.musicxml");
 
     })
 
     function setOptions() {
-        options = {
-        scale: 10,
-           adjustPageWidth:false,
+        let options = {
+            scale: 20,
+            adjustPageWidth: false,
             pageMarginTop: 0,
             pageMarginRight: 0,
             pageMarginBottom: 0,
             pageMarginLeft: 0,
-            header:'none',
-            footer:'none',
+            header: 'none',
+            footer: 'none',
             breaks: "auto",
-            landscape:true,
-            multiRestStyle:'default',
-            svgCss:'g.dir{font-style: normal !important;}'
+            landscape: true,
+            multiRestStyle: 'default',
+            svgCss: 'g.dir{font-style: normal !important;}'
         };
         vrvToolkit.setOptions(options);
     }
+
     function loadData(data) {
         // 是否隐藏拍号
-        hideBeatNumber=data.indexOf("<time print-object=\"no\"")>-1;
+        hideBeatNumber = data.indexOf("<time print-object=\"no\"") > -1;
         setOptions();
         vrvToolkit.loadData(data);
         page = 1;
@@ -65,84 +67,86 @@
         $.ajax({
             url: file
             , dataType: "text"
-            , success: function(data) {
+            , success: function (data) {
                 loadData(data);
-                loadMidi();
+                // loadMidi();
             }
         });
     }
-    // MIDI from base64 to arraybuffer
-    function _base64ToArrayBuffer(base64) {
-        var binaryMidi = window.atob(base64);
-        var u16 = new Uint16Array(binaryMidi.length);
-        var u8 = new Uint8Array(binaryMidi.length);
-        var len = binaryMidi.length;
-        for(var i=0;i<len;i++){
-            u16[i] = binaryMidi[i].charCodeAt(0);
-            u8[i] = u16[i];
-        }
-        return u8.buffer;
-    }
 
-    function loadMidi() {
-        var base64midi = vrvToolkit.renderToMIDI();
-        var songArr = _base64ToArrayBuffer(base64midi);
-        midisong = new Midi(songArr);
-        midijson=JSON.parse(JSON.stringify(midisong));
-        
-        //  处理clef
-       clefs=$('.clef');
-	for(var i=0;i<clefs.length;i++) {
-		midijson.header.keySignatures[i]=vrvToolkit.getElementAttr(clefs[i].id)
-	}
-       notes=$('.note');
-       var k=0;
-       var cnIndex={"1":[],"2":[]};
-       var enIndex={"1":[],"2":[]};
-	for(var i=0;i<notes.length;i++) {
-		let layerId=$('.note')[i].closest('.layer').id;
-		let layer=vrvToolkit.getElementAttr(layerId);
-		let trackNote,layerIndex=layer.n;
-		if(layerIndex=='1') {
-			trackNote=midijson.tracks[0].notes[i-k];
-		} else {
-			trackNote=midijson.tracks[1].notes[k];
-			layerIndex='2';
-		}
-		
-		trackNote.attr=vrvToolkit.getElementAttr(notes[i].id);
-		trackNote.text_cn=[];
-		trackNote.text_en=[];
-		var textArr=$(notes[i]).find('[font-size][class=text]');
-		for(var j=0;j<textArr.length;j++) {
-			var strArr=textArr[j].textContent.split(':');
-			if(strArr.length==2) {
-				if(strArr[0]=='cn') {
-					cnIndex[layerIndex].push(j);
-					trackNote.text_cn.push(strArr[1]);
-				} else if(strArr[0]=='en') {
-					enIndex[layerIndex].push(j);
-					trackNote.text_en.push(strArr[1]);
-				}  else if(strArr[0]=='b') {// 左右手
-					trackNote.b=strArr[1];
-				}   else if(strArr[0]=='a') {// 强弱
-					trackNote.a=strArr[1];
-				} else if(strArr[0]=='c') {// 指法
-					trackNote.fing=strArr[1];
-				} 
-			} else {
-				if(cnIndex[layerIndex].indexOf(j)>-1) {trackNote.text_cn.push(strArr[0]);} 
-				else if(enIndex[layerIndex].indexOf(j)>-1){trackNote.text_en.push(strArr[0]);}
-			}
-		}
-		
-		if(layerIndex=='1') {
-		} else {
-			k++;
-		}
-	}
-	
-       console.log(JSON.stringify(midijson))
-    }
-   
+    // MIDI from base64 to arraybuffer
+    // function _base64ToArrayBuffer(base64) {
+    //     var binaryMidi = window.atob(base64);
+    //     var u16 = new Uint16Array(binaryMidi.length);
+    //     var u8 = new Uint8Array(binaryMidi.length);
+    //     var len = binaryMidi.length;
+    //     for (var i = 0; i < len; i++) {
+    //         u16[i] = binaryMidi[i].charCodeAt(0);
+    //         u8[i] = u16[i];
+    //     }
+    //     return u8.buffer;
+    // }
+
+    // function loadMidi() {
+    //     var base64midi = vrvToolkit.renderToMIDI();
+    //     var songArr = _base64ToArrayBuffer(base64midi);
+    //     midisong = new Midi(songArr);
+    //     midijson = JSON.parse(JSON.stringify(midisong));
+    //
+    //     //  处理clef
+    //     clefs = $('.clef');
+    //     for (var i = 0; i < clefs.length; i++) {
+    //         midijson.header.keySignatures[i] = vrvToolkit.getElementAttr(clefs[i].id)
+    //     }
+    //     notes = $('.note');
+    //     var k = 0;
+    //     var cnIndex = {"1": [], "2": []};
+    //     var enIndex = {"1": [], "2": []};
+    //     for (var i = 0; i < notes.length; i++) {
+    //         let layerId = $('.note')[i].closest('.layer').id;
+    //         let layer = vrvToolkit.getElementAttr(layerId);
+    //         let trackNote, layerIndex = layer.n;
+    //         if (layerIndex == '1') {
+    //             trackNote = midijson.tracks[0].notes[i - k];
+    //         } else {
+    //             trackNote = midijson.tracks[1].notes[k];
+    //             layerIndex = '2';
+    //         }
+    //
+    //         trackNote.attr = vrvToolkit.getElementAttr(notes[i].id);
+    //         trackNote.text_cn = [];
+    //         trackNote.text_en = [];
+    //         var textArr = $(notes[i]).find('[font-size][class=text]');
+    //         for (var j = 0; j < textArr.length; j++) {
+    //             var strArr = textArr[j].textContent.split(':');
+    //             if (strArr.length == 2) {
+    //                 if (strArr[0] == 'cn') {
+    //                     cnIndex[layerIndex].push(j);
+    //                     trackNote.text_cn.push(strArr[1]);
+    //                 } else if (strArr[0] == 'en') {
+    //                     enIndex[layerIndex].push(j);
+    //                     trackNote.text_en.push(strArr[1]);
+    //                 } else if (strArr[0] == 'b') {// 左右手
+    //                     trackNote.b = strArr[1];
+    //                 } else if (strArr[0] == 'a') {// 强弱
+    //                     trackNote.a = strArr[1];
+    //                 } else if (strArr[0] == 'c') {// 指法
+    //                     trackNote.fing = strArr[1];
+    //                 }
+    //             } else {
+    //                 if (cnIndex[layerIndex].indexOf(j) > -1) {
+    //                     trackNote.text_cn.push(strArr[0]);
+    //                 } else if (enIndex[layerIndex].indexOf(j) > -1) {
+    //                     trackNote.text_en.push(strArr[0]);
+    //                 }
+    //             }
+    //         }
+    //
+    //         if (layerIndex == '1') {
+    //         } else {
+    //             k++;
+    //         }
+    //     }
+    // }
+
 </script>
