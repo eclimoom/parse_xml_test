@@ -4,44 +4,96 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" initial-scale=1.0">
     <title></title>
+    <style>
+        svg {
+            fill: #000;
+            stroke: pink;
+        }
+
+        svg .abcjs-staff {
+            fill: pink;
+            stroke: pink;
+        }
+    </style>
 </head>
 <body class="rat">
-    <div class="rat" id="notation"></div>
-    <div id="saveDiv" style="display:none;"></div>
+<div class="rat" id="notation"></div>
+<div id="saveDiv" style="display:none;"></div>
 
-    <script src="../js/abc/jquery-1.11.1.min.js"></script>
-    <script src="../js/abc/xml2abc.js"></script>
-    <script src="../js/abc/abcjs-basic-min.js"></script>
-    <script>
-
-
-        $(document).ready(function () {
+<script src="../js/abc/jquery-1.11.1.min.js"></script>
+<script src="../js/abc/xml2abc.js"></script>
+<!--    <script src="../js/abc/abcjs-basic-min.js"></script>-->
+<script src="../js/abc/abcjs-basic.js"></script>
+<script>
 
 
-            $.get("../assets/2.musicxml", function (data) {
+    $(document).ready(function () {
+        let output = document.getElementById('notation');
+
+
+        $.get("../assets/2.musicxml", function (data) {
             // $.get("../assets/14_big.musicxml", function (data) {
-                loadXml(data, true)
-            });
-            function loadXml(xmlData) {
-                let xml_options = {
-                    u: 0, b: 0, n: 0,  // unfold repeats (1), bars per line, chars per line
-                    c: 0, v: 0, d: 0,  // credit text filter level (0-6), no volta on higher voice numbers (1), denominator unit length (L:)
-                    m: 0, x: 0, t: 0,  // no midi, minimal midi, all midi output (0,1,2), no line breaks (1), perc, tab staff -> voicemap (1)
-                    v1: 0, noped: 0,  // all directions to first voice of staff (1), no pedal directions (1)
-                    stm: 0,          // translate stem elements (stem direction)
-                    p: 'f', s: 0
-                };
-                let res = vertaal(xmlData, xml_options);
-                let abcText = res[0];
-                ABCJS.renderAbc("notation", abcText, { add_classes: true, clickListener: callbackFn});
-            }
-
-            let callbackFn = function (event) {
-                console.log(event);
-            }
-
-
+            loadXml(data, true)
         });
-    </script>
+
+        function loadXml(xmlData) {
+            let xml_options = {
+                u: 0, b: 0, n: 0,  // unfold repeats (1), bars per line, chars per line
+                c: 0, v: 0, d: 0,  // credit text filter level (0-6), no volta on higher voice numbers (1), denominator unit length (L:)
+                m: 0, x: 0, t: 0,  // no midi, minimal midi, all midi output (0,1,2), no line breaks (1), perc, tab staff -> voicemap (1)
+                v1: 0, noped: 0,  // all directions to first voice of staff (1), no pedal directions (1)
+                stm: 0,          // translate stem elements (stem direction)
+                p: 'f', s: 0
+            };
+            let res = vertaal(xmlData, xml_options);
+            let abc = res[0];
+            // 创建绘制音符图谱的选项
+            let visualOptions = {
+                add_classes: true, // 添加类名
+                responsive: "resize", // 自动调整大小
+                // scale: 1.5, // 音符图谱的放大倍数，可以根据需要调整
+                staffwidth: 800, // 音符图谱的宽度，可以根据需要调整
+                // showDebug: [ 'box'], // 显示调试信息
+                selectTypes: ['bar', 'note'],
+                selectionColor: '#f00ff0',
+                clickCallBack: clickCallBack,
+            };
+            ABCJS.renderAbc(
+                output,
+                abc,
+                visualOptions,
+                {}
+            );
+
+
+            renderCallBack(output)
+
+        }
+
+        let clickCallBack = function (event) {
+            console.log(event);
+        }
+
+        function renderCallBack(abcElem) {
+            console.log(abcElem);
+            // console.log(222);
+            // 在渲染完成后，修改音符的颜色
+            let svg = abcElem.querySelector('svg');
+            let notes = svg.querySelectorAll('.abcjs-note');
+            console.log(notes);
+            notes.forEach(function (note) {
+                // 模拟正确和错误状态，根据需要设置不同的颜色
+                let isCorrect = Math.random() < 0.5; // 随机设置为正确或错误状态
+                let color = isCorrect ? 'green' : 'red';
+
+                console.log(color, note);
+                // 设置音符的颜色
+                note.style.fill = color;
+            });
+        }
+
+
+    });
+</script>
 </body>
 </html>
