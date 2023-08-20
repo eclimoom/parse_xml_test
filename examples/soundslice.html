@@ -13,16 +13,12 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <style>
-        /*@font-face {*/
-        /*    font-family: 'Soundslice';*/
-        /*    src: url('https://d2c3nvafyekx5z.cloudfront.net/fonts/bravura1.18-68b07026be22eff7d5838938a23a1093.eot');*/
-        /*    src: url('https://d2c3nvafyekx5z.cloudfront.net/fonts/bravura1.18-68b07026be22eff7d5838938a23a1093.eot?#iefix') format('embedded-opentype'),*/
-        /*    url('https://d2c3nvafyekx5z.cloudfront.net/fonts/bravura1.18-bc70edeef2b6404761c904528ce8c996.woff2') format('woff2'),*/
-        /*    url('https://d2c3nvafyekx5z.cloudfront.net/fonts/bravura1.18-af7c6de7400c96e4fe2ab4bdea401baa.woff') format('woff'),*/
-        /*    url('https://d2c3nvafyekx5z.cloudfront.net/fonts/bravura1.18-6b123f887167c9653b59f2ad4f040f8f.ttf') format('truetype');*/
-        /*    font-weight: normal;*/
-        /*    font-style: normal;*/
-        /*}*/
+        @font-face {
+            font-family: 'Soundslice';
+            url('slice/fonts/bravura1.18-bc70edeef2b6404761c904528ce8c996.woff2') format('woff2'),
+            font-weight: normal;
+            font-style: normal;
+        }
     </style>
 
 </head>
@@ -598,14 +594,14 @@
 
 
         <div id="appandedit" class="appandedit notation-loading"
-             data-modfretboard="https://d2c3nvafyekx5z.cloudfront.net/scripts/player-fretboard.min-933f47a09b66efba2f44e75b67a83c9c.js"
-             data-modkeyboard="https://d2c3nvafyekx5z.cloudfront.net/scripts/player-keyboard.min-84300a9edeaf9a015d12593cdc8befa4.js"
-             data-modtrombone="https://d2c3nvafyekx5z.cloudfront.net/scripts/player-trombone.min-ac7c2a56d4b87a6a0ab87d0b0869cfe3.js"
-             data-modtrumpet="https://d2c3nvafyekx5z.cloudfront.net/scripts/player-trumpet.min-c8838353809f8db5b34ab13a5120c598.js"
-             data-modpractice="https://d2c3nvafyekx5z.cloudfront.net/scripts/player-practice.min-7750f1f5347c4515076e60f5d0243072.js"
-             data-modpracticelist="https://d2c3nvafyekx5z.cloudfront.net/scripts/player-practicelist.min-7be94a698741c3da3faf0f0b583bc3df.js"
-             data-modsettings="https://d2c3nvafyekx5z.cloudfront.net/scripts/player-settings.min-dfb668cd49931ac3102aeb768b09cf61.js"
-             data-modclipsui="https://d2c3nvafyekx5z.cloudfront.net/scripts/player-clipsui.min-91040e988e633b9a004eedea7b1fbc51.js">
+             data-modfretboard="slice/scripts/player-fretboard.min-933f47a09b66efba2f44e75b67a83c9c.js"
+             data-modkeyboard="slice/scripts/player-keyboard.min-84300a9edeaf9a015d12593cdc8befa4.js"
+             data-modtrombone="slice/scripts/player-trombone.min-ac7c2a56d4b87a6a0ab87d0b0869cfe3.js"
+             data-modtrumpet="slice/scripts/player-trumpet.min-c8838353809f8db5b34ab13a5120c598.js"
+             data-modpractice="slice/scripts/player-practice.min-7750f1f5347c4515076e60f5d0243072.js"
+             data-modpracticelist="slice/scripts/player-practicelist.min-7be94a698741c3da3faf0f0b583bc3df.js"
+             data-modsettings="slice/scripts/player-settings.min-dfb668cd49931ac3102aeb768b09cf61.js"
+             data-modclipsui="slice/scripts/player-clipsui.min-91040e988e633b9a004eedea7b1fbc51.js">
 
 
             <button id="show-sidebar" class="show-sidebar">
@@ -2011,7 +2007,7 @@
     var soundslice = {
         "lang": "en",
         "is_ss": 1,
-        "media_url": 'https://d2c3nvafyekx5z.cloudfront.net/',
+        "media_url": 'slice/',
         "user_id": null,
         "isNonfree": false
     };

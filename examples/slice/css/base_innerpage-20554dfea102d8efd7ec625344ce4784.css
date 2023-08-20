@@ -291,21 +291,21 @@ kbd {
 
 @font-face {
     font-family: "freight-text-pro";
-    src: url("../fonts/freight/2CDFA8_2_0-c2ac893f0bf35c631294741d02dad2b7.woff2") format("woff2"), url("../fonts/freight/2CDFA8_2_0-f5855381dc159f35ba6c65eafb05fe50.woff") format("woff");
+    src: url("../fonts/2CDFA8_2_0-c2ac893f0bf35c631294741d02dad2b7.woff2") format("woff2"), url("../fonts/2CDFA8_2_0-f5855381dc159f35ba6c65eafb05fe50.woff") format("woff");
     font-weight: normal;
     font-style: normal
 }
 
 @font-face {
     font-family: "freight-text-pro";
-    src: url("../fonts/freight/2CDFA8_0_0-dd704242fc957c5c311f96fb3b9a1bf4.woff2") format("woff2"), url("../fonts/freight/2CDFA8_0_0-4dbff609f6bc6e14b562599317483e9d.woff") format("woff");
+    src: url("../fonts/2CDFA8_0_0-dd704242fc957c5c311f96fb3b9a1bf4.woff2") format("woff2"), url("../fonts/2CDFA8_0_0-4dbff609f6bc6e14b562599317483e9d.woff") format("woff");
     font-weight: bold;
     font-style: normal
 }
 
 @font-face {
     font-family: "freight-text-pro";
-    src: url("../fonts/freight/2CDFA8_1_0-f013c61555aee95900727f890834f945.woff2") format("woff2"), url("../fonts/freight/2CDFA8_1_0-6bbe08595d66fca561b29a8b253c1603.woff") format("woff");
+    src: url("../fonts/2CDFA8_1_0-f013c61555aee95900727f890834f945.woff2") format("woff2"), url("../fonts/2CDFA8_1_0-6bbe08595d66fca561b29a8b253c1603.woff") format("woff");
     font-weight: normal;
     font-style: italic
 }
