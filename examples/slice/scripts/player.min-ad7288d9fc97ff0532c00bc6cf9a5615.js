@@ -6,7 +6,7 @@ function ha(a) {
     }
 }
 
-let ia = {
+const ia = {
     1: [[[29, 74, 1], [30, 83, 1], [31, 72], [33, 72, 1], [34, 72], [35, 64], [36, 65], [37, 72, 1], [38, 72], [39, 72], [40, 72], [41, 69], [42, 79, 1], [43, 67], [44, 62, 1], [45, 67], [46, 79, 0, 10], [47, 71], [48, 74], [49, 81], [50, 76], [51, 77, 1], [52, 83], [53, 77], [54, 72], [55, 81, 1], [56, 77], [57, 79], [58, 29], [59, 74, 1], [60, 84], [61, 89], [62, 45], [63, 53], [64, 48], [65, 62], [66, 60], [67, 59], [68, 57], [69, 38], [70, 98], [71, 107], [72, 96], [73, 12], [74, 14], [75, 43], [76, 95], [77, 93], [78, 28, 1], [79, 26], [80, 33, 1], [81, 31], [82, 117], [83, 112], [84, 108], [85, 41], [86, 16], [87, 17, 1], [91, 72], [92, 79, 0, 9], [93, 77, 1], [94, 77, 1], [95, 81, 1], [96, 83], [97, 81], [98, 79], [99, 76], [100, 76, 1], [101, 77, 1], [102, 79], [103, 79, 1], [104, 86], [105, 88, 1], [106, 91], [107, 105, 1], [108, 50, 1], [109, 52], [110, 55, 1], [111, 74], [112, 76], [113, 89, 1], [114, 35], [115, 47], [116, 36, 1], [117, 40], [118, 100], [119, 101], [120, 103], [122, 117], [123, 110], [126, 74, 1], [127, 74]], [[35, 64], [36, 65], [37, 72, 1], [38, 72, 0, 8], [40, 72], [42, 79], [43, 67], [44, 62], [45, 69], [46, 79, 0, 0, 1], [46, 79, 1, 0, 1], [47, 71], [48, 74], [49, 81], [50, 76], [51, 77], [52, 83], [53, 77, 0, 8]]],
     2: [[[42, 62], [38, 64], [42, 65]], [[42, 62], [38, 63], [38, 64], [42, 65]]]
 }
@@ -99,8 +99,8 @@ let ia = {
     360: [57811, !0],
     480: [57810, !1]
 };
-let ta = 1 / 3;
-let ya = [0, -1, 1, -2, 2]
+var ta = 1 / 3;
+const ya = [0, -1, 1, -2, 2]
     ,
     Aa = [0, "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX"]
     , Ba = {
@@ -110,15 +110,11 @@ let ya = [0, -1, 1, -2, 2]
     , Da = [64, 59, 55, 50, 45, 40];
 
 function t(a) {
-    return document.getElementById(a);
-}
-
-function tt(a) {
-    return document.getElementById(a);
+    return document.getElementById(a)
 }
 
 function Ea(a, b) {
-    return a.classList.contains(b);
+    return a.classList.contains(b)
 }
 
 function B(a, b) {
@@ -293,11 +289,8 @@ function I(a) {
     var e = 1;
     for (d = b.length; e < d; e += 2) {
         var f = b[e].split(/\s/);
-        if(b[0]){
-            for (c = f.length; c--;)
-                b[0].addEventListener(f[c], b[e + 1])
-        }
-
+        for (c = f.length; c--;)
+            b[0].addEventListener(f[c], b[e + 1])
     }
 }
 
@@ -654,9 +647,8 @@ class Ee {
 ;
 
 function Me(a) {
-    console.log(1111);
     var b = document.querySelector(".modal.active")
-        , c = "string" === typeof a ? tt(a) : a;
+        , c = "string" === typeof a ? t(a) : a;
     b ? (document.activeElement.blur(),
         B(b, "notransition"),
         D(b, "active"),
@@ -672,7 +664,7 @@ function Me(a) {
 }
 
 function Ne(a) {
-    a = "string" === typeof a ? tt(a) : a;
+    a = "string" === typeof a ? t(a) : a;
     document.activeElement.blur();
     D(a, "active");
     D(document.documentElement, "modal-active");
@@ -682,8 +674,7 @@ function Ne(a) {
 function Oe() {
     return null !== document.querySelector(".modal.active")
 }
-
-var Pe = {};
+;var Pe = {};
 
 function Qe(a, b) {
     return b ? Qe(b, a % b) : a
@@ -9063,7 +9054,7 @@ function Ms(a) {
 }
 
 function Ns(a) {
-    let b = tt(a), c;
+    var b = t(a), c;
     I(b, "mouseover", () => {
             c = setInterval(() => {
                     document.activeElement == b && window.focus()
@@ -9236,7 +9227,7 @@ Us.prototype = {
             , d = this.A
             , e = this.G
             , f = this.C;
-        Mb(tt(Os(d)), "block");
+        Mb(t(Os(d)), "block");
         d.F = a;
         3 === Mr ? d.A ? (Rs(d, e),
         b && b(this)) : (d.H = () => {
@@ -9254,7 +9245,7 @@ Us.prototype = {
         O(c, 212, [0, 0])
     },
     pa: function () {
-        Mb(tt(Os(this.A)), "none")
+        Mb(t(Os(this.A)), "none")
     },
     H: Ir,
     M: function () {
@@ -9865,8 +9856,8 @@ function hu(a) {
         c = f.S.A;
         e = f.M;
         d = nn(f);
-        f = Mn(f) - 1;
-        let g;
+        f = --Mn(f);
+        var g;
         iu(a);
         if (e) {
             var h = 0;
@@ -13449,7 +13440,7 @@ function rw(a) {
     a = a.A.C.C;
     for (var b = a.length, c, d; b--;)
         c = a[b],
-            d = tt("mixer" + b),
+            d = t("mixer" + b),
             d.getElementsByClassName("mixername")[0].innerHTML = Xa(c.name),
             Jr(d.getElementsByClassName("inputrange")[0], 100 * c.volume),
             E(d.getElementsByClassName("mixermute")[0], "active", c.Ga),
@@ -13465,14 +13456,14 @@ function sw(a) {
 class uw {
     constructor(a) {
         this.A = a;
-        this.C = tt("mixer");
-        this.G = tt("mixerbody");
-        this.F = tt("mixertemplate");
-        this.D = tt("metronomesection");
+        this.C = t("mixer");
+        this.G = t("mixerbody");
+        this.F = t("mixertemplate");
+        this.D = t("metronomesection");
         this.isActive = !1;
         pw(this) || qw(this);
         gu(a, [61], () => {
-                Jr(tt("volumeslider"), Math.round(100 * this.A.D.volume))
+                Jr(t("volumeslider"), Math.round(100 * this.A.D.volume))
             }
         );
         a.assign([72, 60, 59, 48, 13], () => {
@@ -13491,7 +13482,7 @@ class uw {
                 D(this.D, "unloaded")
             }
             , [62], c => {
-                Jr(tt("metronome-volume"), Math.round(100 * c.data))
+                Jr(t("metronome-volume"), Math.round(100 * c.data))
             }
             , [228], () => {
                 E(this.D, "metronomeoff", !a.ja)
@@ -13769,7 +13760,7 @@ class Nw {
     constructor(a, b, c, d, e) {
         this.C = a;
         this.color = e;
-        this.D = tt(b);
+        this.D = t(b);
         this.wa = this.V = this.T = this.I = this.width = 0;
         this.F = d;
         this.M = this.D.getElementsByClassName("waveformcan")[0];
@@ -13888,7 +13879,7 @@ class Nw {
                 this.S();
                 null === l.W && gw(l, 1E3);
                 l = null !== l.W && !!l.X;
-                E(tt("waveform-status-message"), "hidden", l)
+                E(t("waveform-status-message"), "hidden", l)
             }
         }
         ;
@@ -15042,15 +15033,15 @@ function Cx(a) {
         , d = b.aa
         , e = a.G
         , f = a.xa
-        , g = tt("video-wrapper")
+        , g = t("video-wrapper")
         , h = Ts(a, "video-container")
-        , k = tt("video-sidebar")
-        , l = a.Z ? null : tt("show-sidebar")
+        , k = t("video-sidebar")
+        , l = a.Z ? null : t("show-sidebar")
         , m = f.clientWidth;
     f = b.D.C ? b.D.C.aspectRatio() : Hr;
     !d && (600 > m || 3 === a.X) ? (d = b.A.H,
         (b.F.M = a.T) ? (b = a.Fa ? a.da : a.Ga,
-            c = a.S ? c.innerHeight - tt("controlbar").clientHeight : tt("notation-and-video-wrapper").clientHeight,
+            c = a.S ? c.innerHeight - t("controlbar").clientHeight : t("notation-and-video-wrapper").clientHeight,
             m = !1,
             B(e, "topvideo"),
             B(g, "narrow"),
@@ -15120,7 +15111,7 @@ function Fx(a) {
 function Gx(a, b, c) {
     var d = a.A;
     if (d.aa !== b) {
-        var e = tt("appwrapper");
+        var e = t("appwrapper");
         (d.aa = b) ? (a.ya = a.I,
             B(e, "notationless"),
             Hx(a),
@@ -15134,8 +15125,8 @@ function Gx(a, b, c) {
 
 function Jx(a) {
     a = a.A.P[680 <= a.G.offsetWidth ? a.ba : a.A.I];
-    var b = tt("realrecname");
-    a && (tt("realrecimage").innerHTML = Kx(a),
+    var b = t("realrecname");
+    a && (t("realrecimage").innerHTML = Kx(a),
         b.innerText = a.name,
         b.setAttribute("data-backend", a.index))
 }
@@ -15143,7 +15134,7 @@ function Jx(a) {
 function Lx(a) {
     var b = a.A.ma
         , c = 680 <= a.G.offsetWidth
-        , d = tt("toggle-container");
+        , d = t("toggle-container");
     a: {
         var e = a.A.P;
         for (var f = e.length, g = 0; f--;)
@@ -15154,10 +15145,10 @@ function Lx(a) {
         e = !1
     }
     E(d, "disabled", !e);
-    E(tt("toggle-container"), "nosynth", !tw(a.A));
-    E(tt("midi-toggle"), "multiple", Mx(a));
-    E(tt("usesynth"), "toggle-active", c && b);
-    E(tt("realrectoggle"), "toggle-active", !c || !b);
+    E(t("toggle-container"), "nosynth", !tw(a.A));
+    E(t("midi-toggle"), "multiple", Mx(a));
+    E(t("usesynth"), "toggle-active", c && b);
+    E(t("realrectoggle"), "toggle-active", !c || !b);
     Jx(a)
 }
 
@@ -15228,36 +15219,9 @@ function Sx(a) {
 }
 
 function Tx(a, b) {
-    b = {
-        "id": 0,
-        "slug": "",
-        "sh": "",
-        "name": "Uploaded file",
-        "a": "",
-        "cp": false,
-        "st": false,
-        "s": null,
-        "es": null,
-        "n": true,
-        "d": "https://soundslice-publicviewer.s3.amazonaws.com/json/31f1e902db574b13a28fe157ee0c0fb5?AWSAccessKeyId=ASIA3ZVAOXCBYE2EP36V&Signature=gPxkxAONHUzNG9cP0WAAkJLi41s%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEAYaCXVzLWVhc3QtMSJIMEYCIQC5%2BP5s434bJ1WtBGBppFp55Ds0ZHGwGP7r%2BrUKAu7YQQIhAKFTimB4bg3lTwR%2FXvYVyXplxDL6%2BTe5att8GBN39S%2BvKrgFCL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMODExMDExNTg2MTc5IgzLS4Ng9Z4IaeHEgyYqjAXPMTNOspyYQrLnA%2BlF7YsPP7LLDB%2BkW1kZIGjNS4%2Bcya17xLumgXfAHDGjMElRp7opZE0x0gFleLfqzNfIaZ4J%2Bt7nxGvlNcXR4q8B%2BXNHJX681%2BbYuKXCBod%2BeRVtvl80lrPFXhSmZQwQMuz46X8U51TAmbL57PebQ4xIpm%2F2Co0AxNJyRvaZccIJ%2FoUzgk5kklZlOFadIS92YqYedBLmTmhYfSKhrscSePFxUBVyY9IQUFTKlF1TH7FeskdbEOiN%2FJUm6%2BhydDCWoAM2F8IIjCFtaysQgx6mJSvKLoXLFkSZe11zjz6aMr2l4ccnt169jpxPd55wAKXg8lSpGtLPrt%2B9Bj1t8GLqi6VOlQyqDEji%2Bts9aBdSAsXRpXWwDMTQLP%2BuwmfayGZYcq8pAxMzhZpFSkKbe2t36k5cHEPaTJgGH0EBmGdhAS%2FWgcm9X%2BOgf%2BR4wdpxe%2BVzAuZNolJBO1YvWGrp2QDhOmnNbiq%2FJIvPQB%2Bx0KCx%2FCFjiekEDygF8vu060S07dyiM9RsXOv5QgeQOK34Zm7k1PQjo%2F4N5AnJZteLCffNVMDSng7Y%2Fjf9FIEFRbpyHJAYAAEbzkLwsTsSOR9E3pRE1S0XLeOWSesVfmCIq4%2Bkh5IBRNk9KnyxY5h8ieEAeuV9XEClp8khMiqRCPJNF4Fvep%2FZW2IV%2FOw5oe6ADVIiw5TBV0W1rW2chWvnXUCLpHz4B2k2bDI6K1e%2BoIXNxPUc5o7aZwM2rLRQh%2BuMOXwN%2FtIn0tsUnx3IG6%2BQa1C7yVR7AFOR%2BNxPJo37WaTkw1N8aB32mKdLw86zffBgft9WLsgUGaVQzpjUX75ZkkUwO4S2w1F1mIg8qDZNpvqmJL5oJU3jMPa0iKcGOrAB3x2uxv02QWNU2NKUzlVHePxMeA6Jn%2FLh02tg0eUObb1bXYuFwLEP19CoqGHZtG2jNCg5YasYUR5Df0GWWYsmkxRMeTjfhlrUxL6hSZr5oSkrOTTx52f6Lh3t1EIuyZdyY%2Fl8MNbOWC6wtfaPI730dFTgaIl%2F1HbANNwH%2Bh0QYdbzlPE3uFzRiIV2HkOzJcrjcGhvsr2yTKvf9cUcDKQBTSm8ePWcj9fhZIgVl5Lx0jI%3D&Expires=1692545495",
-        "r": [],
-        "synthurl": "https://d2c3nvafyekx5z.cloudfront.net/json/synth.en-63229668909996f08891be8dd0090c49.json",
-        "u": null,
-        "lang": "en",
-        "owns": false,
-        "v": 0,
-        "sn": true,
-        "pd": "",
-        "pp": false,
-        "ap": 0,
-        "pfc": 0,
-        "sy": true,
-        "cc": 0,
-        "ns": 0
-    };
     var c = a.A
         , d = c.F;
-    // (b.u !== c.va || d.ra && b.lang !== d.ra) && a.F.location.reload();
+    (b.u !== c.va || d.ra && b.lang !== d.ra) && a.F.location.reload();
     var e = c.A
         , f = c.C
         , g = c.Ca;
@@ -15373,19 +15337,48 @@ function Tx(a, b) {
 }
 
 function Zx(a) {
-    var b = ''
-        , c = a.A;
-    b += `./slice/scripts/14.json?width=${a.D.innerWidth}`;
-    O(c, 229);
-    uc("GET", b, null, d => {
-            Tx(a, d)
-        }
-        , () => {
-            P(c, "We couldn't load the notation. Try reloading the page?", !0, 1);
-            a.F.title = Ow(c, "Page not found");
-            Ts(a, "artist-info").innerHTML = Ow(c, "Page not found")
-        }
-    )
+    let d = {
+        "id": 0,
+        "slug": "",
+        "sh": "",
+        "name": "Uploaded file",
+        "a": "",
+        "cp": false,
+        "st": false,
+        "s": null,
+        "es": null,
+        "n": true,
+        "d": "token and cookie",
+        "r": [],
+        "synthurl": "https://d2c3nvafyekx5z.cloudfront.net/json/synth.en-63229668909996f08891be8dd0090c49.json",
+        "u": null,
+        "lang": "en",
+        "owns": false,
+        "v": 0,
+        "sn": true,
+        "pd": "",
+        "pp": false,
+        "ap": 0,
+        "pfc": 0,
+        "sy": true,
+        "cc": 0,
+        "ns": 0
+    };
+    Tx(a, d)
+    // var b = soundslice.scoredata || window.location.pathname + "scoredata/"
+    //     , c = a.A;
+    // b += `?width=${a.D.innerWidth}`;
+    // O(c, 229);
+    // uc("GET", b, null, d=>{
+    //         Tx(a, d)
+    //     }
+    //     , ()=>{
+    //         P(c, "We couldn't load the notation. Try reloading the page?", !0, 1);
+    //         a.F.title = Ow(c, "Page not found");
+    //         Ts(a, "artist-info").innerHTML = Ow(c, "Page not found")
+    //     }
+    // )
+
 }
 
 function Ux(a, b) {
@@ -15459,9 +15452,9 @@ function Xx(a, b) {
         , f = d.C
         , g = a.G
         , h = Ts(a, "playcontainer")
-        , k = tt("togglenotation")
-        , l = !d.da || d.ba ? null : tt("add-notation-from-recording")
-        , m = !d.da || d.ba ? null : tt("editor-on-link")
+        , k = t("togglenotation")
+        , l = !d.da || d.ba ? null : t("add-notation-from-recording")
+        , m = !d.da || d.ba ? null : t("editor-on-link")
         , n = d.ya
         , p = "0" !== e.settings
         , q = b.ch
@@ -15514,7 +15507,7 @@ function Xx(a, b) {
     d.assign([224], G => {
             G = G.data;
             E(h, "withcountin", G);
-            E(tt("loophand-countin"), "active", G)
+            E(t("loophand-countin"), "active", G)
         }
     );
     m = e.play_type;
@@ -15529,7 +15522,7 @@ function Xx(a, b) {
     ;
     for (var u = document.getElementsByClassName("close-viz"), v = u.length; v--;)
         I(u[v], "click", m);
-    var w = tt("instbuttons");
+    var w = t("instbuttons");
     m = G => {
         G = Ta(G.target, "data-inst");
         null !== G && (G = parseInt(G, 10),
@@ -15538,8 +15531,8 @@ function Xx(a, b) {
     }
     ;
     I(w, "click", m);
-    I(tt("mobile-settings-section"), "click", m);
-    I(tt("toggle-waveform"), "click", () => {
+    I(t("mobile-settings-section"), "click", m);
+    I(t("toggle-waveform"), "click", () => {
             4 === a.I ? Qx(a) : Ix(a, 4)
         }
     );
@@ -15586,15 +15579,15 @@ function Xx(a, b) {
             Fx(a)
         }
         , [43], () => {
-            B(tt("video-icons"), "playing")
+            B(t("video-icons"), "playing")
         }
         , [40], () => {
-            D(tt("video-icons"), "playing")
+            D(t("video-icons"), "playing")
         }
     );
-    var y = tt("subtitlenav")
-        , x = tt("subtitleswitch")
-        , z = tt("subtitlecues")
+    var y = t("subtitlenav")
+        , x = t("subtitleswitch")
+        , z = t("subtitlecues")
         , C = null
         , F = "";
     d.assign([68, 58, 70], () => {
@@ -15630,7 +15623,7 @@ function Xx(a, b) {
     );
     p && sy(a);
     if (!d.aa) {
-        var H = tt("video-wrapper"), N = tt("vidsizer"), Q, L;
+        var H = t("video-wrapper"), N = t("vidsizer"), Q, L;
         d.assign([43], () => {
                 B(N, "playing")
             }
@@ -15669,7 +15662,7 @@ function Xx(a, b) {
             Gx(a, !d.aa, !0)
         }
     ) : D(k, "active");
-    k = tt("sliceback");
+    k = t("sliceback");
     n = "";
     p = e.from;
     k && (b.pr ? n = n + '<a href="/practice/" class="slice-breadcrumb">Practice</a><span class="slice-breadcrumb-divider">/</span><a href="' + (b.pul + '" class="slice-breadcrumb">' + Xa(b.pr) + "</a>") : d.da ? (n = '<a href="/manage/" class="slice-breadcrumb">Slices</a>',
@@ -15835,8 +15828,8 @@ function yy(a) {
 }
 
 function cy(a, b) {
-    var c = tt("post-tabs")
-        , d = tt("show-sidebar-mobile");
+    var c = t("post-tabs")
+        , d = t("show-sidebar-mobile");
     B(document.body, "postpage");
     a.A.ba && B(a.H, "coursepage");
     d && J(d, () => {
@@ -15847,7 +15840,7 @@ function cy(a, b) {
             zy(a, !a.P, !1)
         }
     );
-    J(tt("show-sidebar"), () => {
+    J(t("show-sidebar"), () => {
             zy(a, !a.P, !1)
         }
     );
@@ -15868,7 +15861,7 @@ function cy(a, b) {
 
 function Ay(a, b) {
     var c = Ts(a, "postplayer")
-        , d = tt("post-tabs").querySelectorAll(".tab")
+        , d = t("post-tabs").querySelectorAll(".tab")
         , e = d.length;
     E(c, "commentson", "comments" === b);
     E(c, "embedon", "embed" === b);
@@ -15882,7 +15875,7 @@ function $x(a, b) {
     var c = a.A.C;
     Ts(a, "postplayer-content").innerHTML = b;
     cy(a, !0);
-    tt("post-tabs") && (a.A.ba ? Ay(a, "coursenav") : a.A.La && Ay(a, "comments"));
+    t("post-tabs") && (a.A.ba ? Ay(a, "coursenav") : a.A.La && Ay(a, "comments"));
     (b = Ts(a, "post-description")) && c.T && (b.innerHTML = Lt(Xa(c.T)).replace(/\n/g, "<br>"));
     (c = a.F.querySelectorAll(".course-lesson-list .active")[0]) && a.P && c.scrollIntoView(!1)
 }
@@ -15906,7 +15899,7 @@ function By(a, b) {
 function Ey(a) {
     uc("GET", `/api/v1/slices/${a.A.C.F}/related/html/`, null, b => {
             b.count && (Ts(a, "post-related").insertAdjacentHTML("beforeend", b.html),
-                B(tt("post-related-section"), "active"))
+                B(t("post-related-section"), "active"))
         }
         , () => {
         }
@@ -15929,30 +15922,30 @@ function ay(a, b) {
     Ts(a, "postplayer-avatar").src = b.ua;
     d.innerHTML = Xa(b.un);
     d.href = b.uu;
-    tt("embedcodeid").innerHTML = c.F;
+    t("embedcodeid").innerHTML = c.F;
     b.ub && (c = Ts(a, "postplayer-badge"),
         c.setAttribute("data-modal-extra", b.un),
         D(c, "hidden"),
         J(c, soundslice.modalOpenerClick));
     Ts(a, "postplayer-date").innerHTML = b.w;
     By(a, b.ui);
-    b.p && (tt("post-genres").innerHTML = b.p,
-        tt("logged-out-tags").innerHTML = b.p);
+    b.p && (t("post-genres").innerHTML = b.p,
+        t("logged-out-tags").innerHTML = b.p);
     Ay(a, "comments");
     Ey(a);
-    J(tt("toggle-post-related"), () => {
-            Ga(tt("post-related-section"), "show-all")
+    J(t("toggle-post-related"), () => {
+            Ga(t("post-related-section"), "show-all")
         }
     );
-    e && (tt("coursename").innerHTML = Xa(e[0]),
-        tt("courselink").href = e[1],
-        tt("courseimg").src = e[2],
-        B(tt("courselink"), "active"))
+    e && (t("coursename").innerHTML = Xa(e[0]),
+        t("courselink").href = e[1],
+        t("courseimg").src = e[2],
+        B(t("courselink"), "active"))
 }
 
 function zy(a, b, c) {
     if (c || b !== a.P) {
-        var d =tt("show-sidebar-mobile");
+        var d = t("show-sidebar-mobile");
         c || B(a.H, "sidebar-is-animating");
         d && E(d, "active", b);
         E(document.body, "hide-postplayer", !b);
@@ -15963,18 +15956,18 @@ function zy(a, b, c) {
 }
 
 function qy() {
-    var a =tt("controlbar")
-        , b =tt("title-and-time")
+    var a = t("controlbar")
+        , b = t("title-and-time")
         , c = a.getBoundingClientRect().width;
     E(b, "hide", 160 > b.offsetWidth);
     E(a, "medium-width", 900 > c);
     E(a, "small-width", 680 > c);
     E(a, "smallest-width", 540 > c);
-    E(tt("mobile-settings-section"), "show", 540 > c)
+    E(t("mobile-settings-section"), "show", 540 > c)
 }
 
 function dy(a) {
-    J(tt("switchvideoside"), () => {
+    J(t("switchvideoside"), () => {
             a.X = a.A.F.M ? 2 : 3;
             Fx(a)
         }
@@ -15984,15 +15977,15 @@ function dy(a) {
 function Fy(a) {
     a = a.M;
     a = a.T ? -1 : a.V;
-    for (var b =tt("vidlevelchoices").getElementsByTagName("label"), c = b.length; c--;)
+    for (var b = t("vidlevelchoices").getElementsByTagName("label"), c = b.length; c--;)
         E(b[c], "active", parseInt(b[c].getAttribute("data-level"), 10) === a)
 }
 
 function fy(a) {
     var b = a.A
-        , c =tt("vidlevels")
-        , d = tt("vidlevelchoices")
-        , e = tt("vidlevelsmenu");
+        , c = t("vidlevels")
+        , d = t("vidlevelchoices")
+        , e = t("vidlevelsmenu");
     b.assign([212], f => {
             var g = f.data[1];
             f = 1 < g && f.data[0] === b.I;
@@ -16023,7 +16016,7 @@ function fy(a) {
 
 function ty(a) {
     var b = a.A
-        , c = tt("vidflip");
+        , c = t("vidflip");
     B(c, "active");
     J(c, () => {
             Ga(Ts(a, "video-container"), "flip")
@@ -16043,20 +16036,20 @@ function Mx(a) {
 
 function ey(a) {
     var b = a.A
-        , c = tt("synth-toggle-tooltip");
+        , c = t("synth-toggle-tooltip");
     I(c, "click", d => {
             d = Ta(d.target, "data-backend");
             null !== d && (Tw(b, parseInt(d, 10)),
             c && D(c, "active"))
         }
     );
-    I(tt("usesynth"), "click", () => {
+    I(t("usesynth"), "click", () => {
             vw(b)
         }
     );
-    I(tt("midi-toggle"), "mousedown touchstart", oc(() => {
-            var d = parseInt(tt("realrecname").getAttribute("data-backend"), 10);
-            d !== b.I ? Tw(b, d) : Mx(a) && ((d = tt("synthlistitem")) && E(d, "visible", !(680 <= a.G.offsetWidth)),
+    I(t("midi-toggle"), "mousedown touchstart", oc(() => {
+            var d = parseInt(t("realrecname").getAttribute("data-backend"), 10);
+            d !== b.I ? Tw(b, d) : Mx(a) && ((d = t("synthlistitem")) && E(d, "visible", !(680 <= a.G.offsetWidth)),
                 $c(c, Ir, Ir, !0))
         }
     ))
@@ -16102,9 +16095,9 @@ function ky(a) {
 }
 
 function ly(a) {
-    var b = a.A, c = new Br(new Ee(tt("progressbarcan"), b.T)), d = tt("progressbar"), e = tt("progressmarker"),
-        f = tt("progresstip"), g = tt("currentmeasure"), h = tt("nummeasures"), k = tt("currenttime1"),
-        l = tt("currenttime2"), m = Ts(a, "totaltime"), n = tt("totaltime2"), p = !1, q = !1, r;
+    var b = a.A, c = new Br(new Ee(t("progressbarcan"), b.T)), d = t("progressbar"), e = t("progressmarker"),
+        f = t("progresstip"), g = t("currentmeasure"), h = t("nummeasures"), k = t("currenttime1"),
+        l = t("currenttime2"), m = Ts(a, "totaltime"), n = t("totaltime2"), p = !1, q = !1, r;
     gu(b, [195], () => {
             var u = a.ka;
             u !== c.width && (yd(c.A, u),
@@ -16113,7 +16106,7 @@ function ly(a) {
                 Ar(c))
         }
     );
-    I(tt("progressnib"), "mouseover", () => {
+    I(t("progressnib"), "mouseover", () => {
             q = !0;
             O(b, 46)
         }
@@ -16210,13 +16203,13 @@ function Gy(a, b) {
 }
 
 function jy(a) {
-    var b = a.A, c = b.D, d = tt("speedui-footer"), e = d.querySelectorAll(".speed-tooltip")[0],
+    var b = a.A, c = b.D, d = t("speedui-footer"), e = d.querySelectorAll(".speed-tooltip")[0],
         f = d.querySelectorAll(".input-group-text")[0], g = d.querySelectorAll(".speedlabel")[0],
         h = d.querySelectorAll(".speedvalue")[0], k = d.querySelectorAll(".speedvaluetext")[0],
         l = d.querySelectorAll(".speedinp")[0], m = d.querySelectorAll(".enhanced-slowdown-form")[0],
-        n = tt("improved-slowdown"), p = tt("speedtrainmodal"), q = tt("speedtrainform"),
-        r = document.querySelectorAll(".jstraintype"), u = d.querySelectorAll("#speedpresets .jspreset"),
-        v = tt("speedpreset100bpm"), w = () => {
+        n = t("improved-slowdown"), p = t("speedtrainmodal"), q = t("speedtrainform"),
+        r = q.querySelectorAll(".jstraintype"), u = d.querySelectorAll("#speedpresets .jspreset"),
+        v = t("speedpreset100bpm"), w = () => {
             D(e, "active");
             l.value = ""
         }
@@ -16253,7 +16246,7 @@ function jy(a) {
             }
         }
     );
-    I(tt("speedpresets"), "click", x => {
+    I(t("speedpresets"), "click", x => {
             if (x = Ta(x.target, "data-val")) {
                 if ("train" === x) {
                     x = Rv(c) ? "%" : Ow(c.A, "BPM");
@@ -16360,17 +16353,17 @@ function gy(a) {
     var b = a.A
         , c = Ts(a, "loopbutton")
         , d = Ts(a, "loophand-button")
-        , e = tt("loophand-more-menu")
-        , f = tt("loophand-once")
-        , g = tt("loophand-focus")
-        , h = tt("loophand-focus-options")
-        , k = tt("loophand-save")
+        , e = t("loophand-more-menu")
+        , f = t("loophand-once")
+        , g = t("loophand-focus")
+        , h = t("loophand-focus-options")
+        , k = t("loophand-save")
         , l = b.M
-        , m = tt("loopfocus-nav")
-        , n = tt("loopfocus-text")
-        , p = tt("loopfocus-b1")
-        , q = tt("loopfocus-b2")
-        , r = tt("clipnotes")
+        , m = t("loopfocus-nav")
+        , n = t("loopfocus-text")
+        , p = t("loopfocus-b1")
+        , q = t("loopfocus-b2")
+        , r = t("clipnotes")
         , u = () => {
             var w = parseInt(p.value.trim(), 10) - 1
                 , y = parseInt(q.value.trim(), 10) - 1;
@@ -16396,7 +16389,7 @@ function gy(a) {
             D(e, "active")
         }
     );
-    I(tt("loophand-countin"), "click", () => {
+    I(t("loophand-countin"), "click", () => {
             Gv(b.D, !b.D.M);
             D(e, "active")
         }
@@ -16452,13 +16445,13 @@ function gy(a) {
 function hy(a) {
     var b = a.A
         , c = b.D
-        , d = tt("metronome-tooltip-button")
-        , e = tt("toggle-metronome")
-        , f = tt("countin-toggle")
-        , g = tt("metronome-every-beat")
-        , h = tt("metronome-loop-countin")
-        , k = tt("countinlen");
-    ad(d, tt("metronome-tooltip"), null, null, !1);
+        , d = t("metronome-tooltip-button")
+        , e = t("toggle-metronome")
+        , f = t("countin-toggle")
+        , g = t("metronome-every-beat")
+        , h = t("metronome-loop-countin")
+        , k = t("countinlen");
+    ad(d, t("metronome-tooltip"), null, null, !1);
     I(e, "change", () => {
             nx(b, e.checked);
             Sa()
@@ -16490,8 +16483,8 @@ function hy(a) {
             g.value = b.xa ? "1" : "0";
             h.value = c.I ? "1" : "0";
             k.value = c.S;
-            E(tt("metronome-options"), "show", b.ja);
-            E(tt("countin-options"), "show", c.M || c.I);
+            E(t("metronome-options"), "show", b.ja);
+            E(t("countin-options"), "show", c.M || c.I);
             E(d, "active", b.ja || c.M || c.I)
         }
     )
@@ -16501,19 +16494,19 @@ function my(a) {
     var b = a.A
         , c = fx(b);
     if (c || b.W.A.length) {
-        var d = tt("clips-button")
-            , e = tt("clips-tooltip-1")
-            , f = tt("clips-tooltip-2")
-            , g = tt("clips-list")
-            , h = tt("loopfocus-save")
-            , k = tt("loopfocus-edit")
-            , l = tt("clips-cbar-count")
+        var d = t("clips-button")
+            , e = t("clips-tooltip-1")
+            , f = t("clips-tooltip-2")
+            , g = t("clips-list")
+            , h = t("loopfocus-save")
+            , k = t("loopfocus-edit")
+            , l = t("clips-cbar-count")
             , m = "";
         if (!c) {
-            var n = tt("clips-tooltip-creation");
+            var n = t("clips-tooltip-creation");
             n && B(n, "hidden")
         }
-        ad(d, tt("clips-tooltip"), () => {
+        ad(d, t("clips-tooltip"), () => {
                 B(d, "active")
             }
             , () => {
@@ -16544,7 +16537,7 @@ function my(a) {
                 p = p.data;
                 var q = yr(b.W, p);
                 if (m) {
-                    var r = tt(`clip-${m}`);
+                    var r = t(`clip-${m}`);
                     r && D(r, "active");
                     m = ""
                 }
@@ -16564,11 +16557,11 @@ function my(a) {
                 }
             }
         );
-        c && (J(tt("clips-trigger"), () => {
+        c && (J(t("clips-trigger"), () => {
                 Hy(a)
             }
         ),
-            J(tt("clips-trigger-2"), () => {
+            J(t("clips-trigger-2"), () => {
                     Hy(a)
                 }
             ),
@@ -16581,7 +16574,7 @@ function my(a) {
                 }
             ));
         gu(b, [32, 184, 185], () => {
-                E(tt("clips-cbar"), "hidden", !b.C.A.length)
+                E(t("clips-cbar"), "hidden", !b.C.A.length)
             }
         )
     }
@@ -16590,19 +16583,19 @@ function my(a) {
 function ny(a) {
     var b = a.A
         , c = a.C.A
-        , d = tt("slidenav")
-        , e = tt("prevslidediv")
-        , f = tt("nextslidediv")
+        , d = t("slidenav")
+        , e = t("prevslidediv")
+        , f = t("nextslidediv")
         , g = () => {
             5 === c.F && (E(e, "active", 0 !== c.V),
                 E(f, "active", c.V !== c.ta - 1))
         }
     ;
-    J(tt("prevslide"), () => {
+    J(t("prevslide"), () => {
             Xw(b, c.V - 1)
         }
     );
-    J(tt("nextslide"), () => {
+    J(t("nextslide"), () => {
             Xw(b, c.V + 1)
         }
     );
@@ -16627,8 +16620,8 @@ function ny(a) {
 
 function iy(a) {
     var b = a.A
-        , c = tt("toggle-lyricsonly")
-        , d = tt("mobile-toggle-lyricsonly");
+        , c = t("toggle-lyricsonly")
+        , d = t("mobile-toggle-lyricsonly");
     J(c, () => {
             Fn(b.A, !b.F.Z)
         }
@@ -16654,7 +16647,7 @@ function Jy(a, b, c, d) {
             comment: b,
             parent_id: c
         }, e => {
-            var f = c ? tt("commentthread" + c) : d;
+            var f = c ? t("commentthread" + c) : d;
             f.insertAdjacentHTML("beforeend", e.html);
             f && B(f, "isthread")
         }
@@ -16664,13 +16657,13 @@ function Jy(a, b, c, d) {
 }
 
 function Ky(a) {
-    a = tt("commentthread" + a);
+    a = t("commentthread" + a);
     Qa(a.getElementsByClassName("comment-reply-form")[0]);
     D(a, "withreplyform")
 }
 
 function Ly(a, b) {
-    Qa(tt("comment" + b));
+    Qa(t("comment" + b));
     uc("DELETE", Iy(a) + `${b}/`, null, () => {
         }
         , () => {
@@ -16703,8 +16696,8 @@ function by(a) {
                 , g = Ta(f, "data-replyid");
             if (g)
                 e = parseInt(g, 10),
-                    a.A.va ? (f = tt("comrplytemplate").innerHTML,
-                        g = tt("commentthread" + e),
+                    a.A.va ? (f = t("comrplytemplate").innerHTML,
+                        g = t("commentthread" + e),
                         f = f.replace(/name="pid" value=""/g, `name="pid" value="${e}"`),
                         f = f.replace(/data-cancelreply=""/g, `data-cancelreply="${e}"`),
                         g.insertAdjacentHTML("beforeend", f),
@@ -16766,35 +16759,35 @@ function ry(a) {
         Hx(a));
     (!e && 1 === n || !f && 2 === n || !g && 3 === n || !k && 6 === n || !h && 7 === n) && Qx(a);
     k ? p = 6 : h ? p = 7 : g ? p = 3 : f ? p = 2 : e && (p = 1);
-    E(tt("toggle-keyboard"), "visible", e && 1 !== p);
-    E(tt("toggle-fretboard"), "visible", f && 2 !== p);
-    E(tt("toggle-violinboard"), "visible", g && 3 !== p);
-    E(tt("toggle-trombone"), "visible", h && 7 !== p);
-    E(tt("toggle-trumpet"), "visible", k && 6 !== p);
-    E(tt("toggle-mixer"), "visible", !0);
-    E(tt("toggle-lyricsonly"), "visible", m);
-    a = tt("toggle-metronome");
+    E(t("toggle-keyboard"), "visible", e && 1 !== p);
+    E(t("toggle-fretboard"), "visible", f && 2 !== p);
+    E(t("toggle-violinboard"), "visible", g && 3 !== p);
+    E(t("toggle-trombone"), "visible", h && 7 !== p);
+    E(t("toggle-trumpet"), "visible", k && 6 !== p);
+    E(t("toggle-mixer"), "visible", !0);
+    E(t("toggle-lyricsonly"), "visible", m);
+    a = t("toggle-metronome");
     c = b.S;
     E(a, "visible", null !== c ? !!c.C.Ga.length : !1);
-    E(tt("mobile-toggle-keyboard"), "visible", e);
-    E(tt("mobile-toggle-fretboard"), "visible", f);
-    E(tt("mobile-toggle-violinboard"), "visible", g);
-    E(tt("mobile-toggle-trombone"), "visible", h);
-    E(tt("mobile-toggle-trumpet"), "visible", k);
-    E(tt("mobile-toggle-mixer"), "visible", !0);
-    E(tt("mobile-toggle-lyricsonly"), "visible", m);
-    E(tt("primvizbut"), "visible", 0 !== p);
-    E(tt("settings-viz-header"), "active", e || f || g || h || k || m);
-    E(tt("toggle-waveform"), "hidden", !l);
-    0 !== p && (tt("primvizbut").setAttribute("data-inst", p),
-       tt("primvizsvg").innerHTML = '<use xlink:href="#shape-' + Bx[p] + '"></use>',
-       tt("primvizname").innerText = Ow(b, Ax[p]));
-    E(tt("toggle-settings"), "visible", !0);
+    E(t("mobile-toggle-keyboard"), "visible", e);
+    E(t("mobile-toggle-fretboard"), "visible", f);
+    E(t("mobile-toggle-violinboard"), "visible", g);
+    E(t("mobile-toggle-trombone"), "visible", h);
+    E(t("mobile-toggle-trumpet"), "visible", k);
+    E(t("mobile-toggle-mixer"), "visible", !0);
+    E(t("mobile-toggle-lyricsonly"), "visible", m);
+    E(t("primvizbut"), "visible", 0 !== p);
+    E(t("settings-viz-header"), "active", e || f || g || h || k || m);
+    E(t("toggle-waveform"), "hidden", !l);
+    0 !== p && (t("primvizbut").setAttribute("data-inst", p),
+        t("primvizsvg").innerHTML = '<use xlink:href="#shape-' + Bx[p] + '"></use>',
+        t("primvizname").innerText = Ow(b, Ax[p]));
+    E(t("toggle-settings"), "visible", !0);
     qy()
 }
 
 function vy(a) {
-    var b = tt("fullscreenbutton")
+    var b = t("fullscreenbutton")
         , c = !1;
     B(b, "visible");
     D(b, "hidden");
@@ -16828,12 +16821,12 @@ function vy(a) {
 
 function sy(a) {
     var b = () => {
-            var c = !Ea(tt("toggle-settings"), "active");
+            var c = !Ea(t("toggle-settings"), "active");
             My(a, c, "")
         }
     ;
-    J(tt("toggle-settings"), b);
-    J(tt("closesettings"), b)
+    J(t("toggle-settings"), b);
+    J(t("closesettings"), b)
 }
 
 function My(a, b, c) {
@@ -16951,10 +16944,10 @@ function oy(a) {
 function py(a) {
     var b = a.A
         , c = a.$
-        , d = tt("contextmenu")
-        , e = tt("contextmenu-wrapper")
-        , f = tt("context-instruments")
-        , g = tt("context-appearance")
+        , d = t("contextmenu")
+        , e = t("contextmenu-wrapper")
+        , f = t("context-instruments")
+        , g = t("context-appearance")
         , h = d.offsetWidth
         , k = d.offsetHeight
         , l = -1
@@ -17006,7 +16999,7 @@ function py(a) {
             clearTimeout(p)
         }
     );
-    J(tt("context-loop"), () => {
+    J(t("context-loop"), () => {
             cv(b, b.A, l, m, b.H, !0);
             br(b.H) && mv(b.M, b.H.A, 0, !0, !1, !1, 0, b.H.A, 1, !0, !1, !1, 0);
             r()
@@ -17022,12 +17015,12 @@ function py(a) {
             r()
         }
     );
-    J(tt("context-zoom"), () => {
+    J(t("context-zoom"), () => {
             My(a, !0, "zoom-panel");
             r()
         }
     );
-    J(tt("context-transpose"), () => {
+    J(t("context-transpose"), () => {
             My(a, !0, "transposeui");
             r()
         }
@@ -17070,8 +17063,8 @@ class Ny {
         this.ra = !1;
         this.wa = this.ka = 0;
         this.ba = -1;
-        this.G = tt("appwrapper");
-        this.xa = tt("musicwrapper");
+        this.G = t("appwrapper");
+        this.xa = t("musicwrapper");
         this.Ka = () => {
             Cx(this);
             this.ra = !1
@@ -17150,7 +17143,7 @@ class Ny {
                     var x = v[y];
                     (x.F ? tw(r) : 1) && (u += "<label " + (x.F ? 'id="synthlistitem" ' : "") + 'class="visible" data-backend="' + x.index + '"><div class="ui-tooltip-button link-text-center' + (x.index === r.I ? " active" : "") + '"><input type="radio" name="audiotype" class="invisible-radio">' + Kx(x) + '<span class="truncate-text reset-lh" title="' + Xa(x.name) + '">' + Xa(x.name) + "</span></div></label>")
                 }
-               tt("recordings-tooltip").innerHTML = u;
+                t("recordings-tooltip").innerHTML = u;
                 Lx(this)
             }
             , [211], () => {
@@ -17519,10 +17512,9 @@ class dz {
     }
 }
 
-
 function ez() {
     var a = Nb()
-        , b = new Ny(window, tt("appandedit"), a);
+        , b = new Ny(window, t("appandedit"), a);
     b.A.assign([33], () => {
             B(b.H, "notation-loading")
         }
@@ -17535,7 +17527,5 @@ function ez() {
     soundslice.webui = b
 }
 
-ib(() => {
-        ez()
-    }
-);
+ez();
+
