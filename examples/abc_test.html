@@ -32,7 +32,7 @@
 
 
         $.get("../assets/2.musicxml", function (data) {
-            // $.get("../assets/14_big.musicxml", function (data) {
+        // $.get("../assets/14_big.musicxml", function (data) {
             loadXml(data, true)
         });
 
@@ -56,7 +56,7 @@
                 // showDebug: [ 'box'], // 显示调试信息
                 selectTypes: ['bar', 'note'],
                 selectionColor: '#f00ff0',
-                clickCallBack: clickCallBack,
+                clickListener: clickCallBack,
             };
             ABCJS.renderAbc(
                 output,
