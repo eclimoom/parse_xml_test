@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
 <head>
     <title>music xml</title>
-    <!--    <link rel="preload" href="fonts/bravura1.18-bc70edeef2b6404761c904528ce8c996.woff2" as="font" type="font/woff2"-->
-    <!--          crossorigin>-->
-    <link rel="preload" href="slice/scripts/player.min-ad7288d9fc97ff0532c00bc6cf9a5615.js" as="script">
+        <link rel="preload" href="slice/fonts/bravura1.18-bc70edeef2b6404761c904528ce8c996.woff2" as="font" type="font/woff2"
+              crossorigin>
+    <link rel="preload" href="slice/scripts/player.beautify.js" as="script">
     <link rel="stylesheet" href="slice/css/base_innerpage-20554dfea102d8efd7ec625344ce4784.css">
 
     <link rel="stylesheet" href="slice/css/player_full-160175f38f0e12ab881b3db53cf6a668.css" type="text/css">
@@ -15,7 +15,10 @@
     <style>
         @font-face {
             font-family: 'Soundslice';
+            src: url('slice/fonts/bravura1.18-68b07026be22eff7d5838938a23a1093.eot');
             url('slice/fonts/bravura1.18-bc70edeef2b6404761c904528ce8c996.woff2') format('woff2'),
+            url('slice/fonts/bravura1.18-af7c6de7400c96e4fe2ab4bdea401baa.woff') format('woff'),
+            url('slice/fonts/bravura1.18-6b123f887167c9653b59f2ad4f040f8f.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
@@ -1594,7 +1597,25 @@
                             </div>
                         </div>
 
-                        <div id="mixerbody"></div>
+                        <div id="mixerbody">
+                            <div id="mixer0" class="volume-row">
+                                <div class="mixername">Voice</div>
+                                <div class="mixervol-wrapper">
+                                    <div class="mixervol">
+                                        <input data-action="5" type="range" class="inputrange" min="0" max="100" style="background-image: linear-gradient(to right, rgb(207, 129, 12) 0%, rgb(207, 129, 12) 100%, rgba(255, 255, 255, 0.3) 100%, rgba(255, 255, 255, 0.3) 100%);">
+                                    </div>
+                                    <div class="mixerbutton-wrapper">
+
+                                        <button class="mixermute mixerbutton" data-action="6">Mute</button>
+
+                                        <div class="mixerinst select-wrapper select-wrapper-mini">
+                                            <select class="select-list mixerinst-select" data-action="9"><option value="21">Accordion: Standard</option><option value="23">Accordion: Tango</option><option value="109">Bagpipe</option><option value="105">Banjo</option><option value="32">Bass: Acoustic</option><option value="33">Bass: Electric, fingered</option><option value="34">Bass: Electric, picked</option><option value="35">Bass: Fretless</option><option value="36">Bass: Slap 1</option><option value="37">Bass: Slap 2</option><option value="38">Bass: Synth 1</option><option value="39">Bass: Synth 2</option><option value="70">Bassoon</option><option value="76">Blown bottle</option><option value="61">Brass section</option><option value="8">Celesta</option><option value="42">Cello</option><option value="52">Choir aahs</option><option value="53">Choir oohs</option><option value="71">Clarinet</option><option value="7">Clavinet</option><option value="15">Dulcimer</option><option value="69">English horn</option><option value="73">Flute</option><option value="60">French horn</option><option value="9">Glockenspiel</option><option value="24">Guitar: Acoustic nylon</option><option value="25">Guitar: Acoustic steel</option><option value="27">Guitar: Electric clean</option><option value="30">Guitar: Electric distorted</option><option value="26">Guitar: Electric jazz</option><option value="28">Guitar: Electric muted</option><option value="29">Guitar: Electric overdriven</option><option value="31">Guitar harmonics</option><option value="22">Harmonica</option><option value="46">Harp</option><option value="6">Harpsichord</option><option value="12">Marimba</option><option value="10">Music box</option><option value="68">Oboe</option><option value="79">Ocarina</option><option value="19">Organ: Church</option><option value="16">Organ: Drawbar</option><option value="17">Organ: Percussive</option><option value="20">Organ: Reed</option><option value="18">Organ: Rock</option><option value="75">Pan flute</option><option value="1">Piano: Bright</option><option value="4">Piano: Electric</option><option value="2">Piano: Electric grand</option><option value="3">Piano: Honky tonk</option><option value="0">Piano: Standard</option><option value="72">Piccolo</option><option value="74">Recorder</option><option value="65">Saxophone: Alto</option><option value="67">Saxophone: Baritone</option><option value="64">Saxophone: Soprano</option><option value="66">Saxophone: Tenor</option><option value="104">Sitar</option><option value="45">Strings: Pizzicato</option><option value="44">Strings: Tremolo</option><option value="47">Timpani</option><option value="57">Trombone</option><option value="56">Trumpet</option><option value="58">Tuba</option><option value="14">Tubular bells</option><option value="241">Ukulele</option><option value="11">Vibraphone</option><option value="41">Viola</option><option value="40">Violin</option><option value="78">Whistle</option><option value="13">Xylophone</option></select>
+                                            <div class="select-caret" aria-hidden="true" role="presentation"><svg class="svg-icon"><use xlink:href="#shape-dropdown"></use></svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                         <div id="metronomesection" class="unloaded metronomeoff volume-row">
                             <h5 class="mixername">Metronome</h5>
@@ -2013,7 +2034,8 @@
     };
 </script>
 <script type="text/javascript" src="slice/scripts/common-v2.min-df77dadf623ab76211da2a28d7a88e0d.js"></script>
-<script type="text/javascript" src="slice/scripts/player.min-ad7288d9fc97ff0532c00bc6cf9a5615.js"></script>
+<!--<script type="text/javascript" src="slice/scripts/player.min-ad7288d9fc97ff0532c00bc6cf9a5615.js"></script>-->
+<script type="text/javascript" src="slice/scripts/player.beautify.js"></script>
 <script type="text/javascript" src="slice/scripts/practice-lists-ui.min-7176b0ebe270348cd0795faab53ce1f7.js"></script>
 
 

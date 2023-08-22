@@ -505,8 +505,14 @@ function Ed(a, b) {
 
 function Fd(a, b, c) {
     var d = "";
-    4 === a ? d = c ? "fonts/freight/2CDFA8_1_0-f013c61555aee95900727f890834f945.woff2" : b ? "fonts/freight/2CDFA8_0_0-dd704242fc957c5c311f96fb3b9a1bf4.woff2" : "fonts/freight/2CDFA8_2_0-c2ac893f0bf35c631294741d02dad2b7.woff2" : 5 === a ? d = "fonts/abeezee/regular-8970dfa7c444c9489c4319032f3159f8.woff2" : 2 === a && (b && !c && (d = "fonts/proxima/2F3AD3_8_0-e835dd5dc9e570f8f3982d53fb740851.woff2"),
-    !b && c && (d = "fonts/proxima/2F3AD3_3_0-83f070773e1ee1f3141f67725fea2eb9.woff2"));
+    4 === a ? d = c ?
+        "fonts/2CDFA8_1_0-f013c61555aee95900727f890834f945.woff2" : b ?
+            "fonts/2CDFA8_0_0-dd704242fc957c5c311f96fb3b9a1bf4.woff2" :
+            "fonts/2CDFA8_2_0-c2ac893f0bf35c631294741d02dad2b7.woff2" : 5 === a ? d =
+        "fonts/regular-8970dfa7c444c9489c4319032f3159f8.woff2" : 2 === a && (b && !c && (d =
+        "fonts/2F3AD3_8_0-e835dd5dc9e570f8f3982d53fb740851.woff2"),
+    !b && c && (d = "fonts/2F3AD3_3_0-83f070773e1ee1f3141f67725fea2eb9.woff2"));
+    console.log('d', d);
     return d
 }
 
@@ -514,6 +520,8 @@ function Rd(a, b, c, d, e) {
     var f = 1 === c ? "soundslice" : 2 === c ? "proxima-nova" : 4 === c ? "ss-freight" : 5 === c ? "abeezee" : "times new roman,times,serif";
     if (document.fonts) {
         var g = Fd(c, !!d, !!e);
+        // 本地 少调一次用
+        console.log('todo: 本地 少调一次用', c, !!d, !!e);
         g && !od[g] && (od[g] = !0,
             (new FontFace(f, `url(${a.F}${g})`, {
                 style: e ? "italic" : "normal",
@@ -8133,13 +8141,13 @@ function Sr(a, b, c) {
     this.gb = -1;
     this.mb = this.kb = 0;
     this.eb = this.Ya = !0;
-    a = document.createElement("audio");
-    try {
-        this.Ya = !!a.canPlayType("audio/mpeg"),
-            this.eb = !!a.canPlayType('audio/ogg; codecs="vorbis"')
-    } catch (d) {
-        this.eb = this.Ya = !1
-    }
+    // a = document.createElement("audio");
+    // try {
+    //     this.Ya = !!a.canPlayType("audio/mpeg"),
+    //         this.eb = !!a.canPlayType('audio/ogg; codecs="vorbis"')
+    // } catch (d) {
+    //     this.eb = this.Ya = !1
+    // }
 }
 
 function Tr(a) {
@@ -8167,6 +8175,7 @@ function Tr(a) {
 
 function Ur(a, b) {
     uc("GET", b, null, c => {
+            console.log("c", c);
             for (var d = {}, e = c.inst, f = e.length; f--;)
                 d[e[f][0]] = [e[f][2], e[f][3]];
             a.Xa = d;
@@ -8207,24 +8216,27 @@ function Yr(a, b) {
         , e = a.eb ? 1 : a.Ya ? 2 : 3;
     c && (b = 1E3);
 
-    Zr(a, b) || a.Oa[b] || !a.Ta.length || d && !a.Ga.length ||
-    (a.Oa[b] = !0, d || (a.da = !0, O(a.A, 8)), c = new Er($r(a, b, d, c, e), e), a.ma[b] = c,
-        Cr(c).then(() => {
-            var f = 0
-                , g = a.Oa;
-            g[b] = !1;
-            for (var h in g)
-                g.hasOwnProperty(h) && g[h] && f++;
-            a.da && 0 === f && (a.da = !1,
-                a.qb = !0,
-                O(a.A, 7, a.C))
-        }
-    ).catch(() => {
-            P(a.A, "Couldn't load the synth player.", !0, 1);
-            a.da = !1;
-            O(a.A, 6)
-        }
-    ))
+    Zr(a, b) || a.Oa[b] || !a.Ta.length || d && !a.Ga.length;
+    a.Oa[b] = !0;
+    d || (a.da = !0, O(a.A, 8));
+    c = new Er($r(a, b, d, c, e), e);
+    a.ma[b] = c;
+        // Cr(c).then(() => {
+        //         var f = 0
+        //             , g = a.Oa;
+        //         g[b] = !1;
+        //         for (var h in g)
+        //             g.hasOwnProperty(h) && g[h] && f++;
+        //         a.da && 0 === f && (a.da = !1,
+        //             a.qb = !0,
+        //             O(a.A, 7, a.C))
+        //     }
+        // ).catch(() => {
+        //         P(a.A, "Couldn't load the synth player.", !0, 1);
+        //         a.da = !1;
+        //         O(a.A, 6)
+        //     }
+        // )
 }
 
 function as(a) {
@@ -13430,7 +13442,7 @@ function qw(a) {
         , d = "";
     var e = 0;
     for (c = c.length; e !== c; e++)
-        d += `<div id="mixer ${e}" data-trackid="${e}" class="volume-row">${b}</div>`;
+        d += `<div id="mixer${e}" data-trackid="${e}" class="volume-row">${b}</div>`;
     a.G.innerHTML = d;
     rw(a)
 }
@@ -14463,6 +14475,10 @@ function Uw(a, b, c) {
 
 function Vw(a, b) {
     O(a, 33);
+    console.log('b', b)
+    if(b.includes('token and cookie')){
+        return;
+    }
     uc("GET", b, null, c => {
             Uw(a, c, !0)
         }
@@ -15000,8 +15016,8 @@ class wx {
 }
 
 function xx(a, b) {
-    a.fonts.ready.then(() => {
-            a.fonts.load("9px soundslice").then(c => {
+    document.fonts.ready.then(() => {
+        document.fonts.load("9px soundslice").then(c => {
                     c.length ? (c = b.A,
                         vf(c.ya, 1),
                         Fm(c, !0)) : yx(b)
@@ -15347,9 +15363,9 @@ function Zx(a) {
         "s": null,
         "es": null,
         "n": true,
-        "d": "token and cookie",
+        "d": "/parse_xml_test/examples/slice/scripts/3.json",
         "r": [],
-        "synthurl": "https://d2c3nvafyekx5z.cloudfront.net/json/synth.en-63229668909996f08891be8dd0090c49.json",
+        "synthurl": "/parse_xml_test/examples/slice/scripts/synth.en.json",
         "u": null,
         "lang": "en",
         "owns": false,
@@ -17142,7 +17158,7 @@ class Ny {
                     var x = v[y];
                     (x.F ? tw(r) : 1) && (u += "<label " + (x.F ? 'id="synthlistitem" ' : "") + 'class="visible" data-backend="' + x.index + '"><div class="ui-tooltip-button link-text-center' + (x.index === r.I ? " active" : "") + '"><input type="radio" name="audiotype" class="invisible-radio">' + Kx(x) + '<span class="truncate-text reset-lh" title="' + Xa(x.name) + '">' + Xa(x.name) + "</span></div></label>")
                 }
-                t("recordings-tooltip").innerHTML = u;
+                tt("recordings-tooltip").innerHTML = u;
                 Lx(this)
             }
             , [211], () => {
@@ -17220,15 +17236,14 @@ function Oy(a) {
             };
             w && (F.sid = w);
             C = !0;
-            debugger
-            uc("POST", "/practicesession/", F, H => {
-                    w || (w = H.sid);
-                    C = !1
-                }
-                , () => {
-                    C = !1
-                }
-            );
+            // uc("POST", "/practicesession/", F, H => {
+            //         w || (w = H.sid);
+            //         C = !1
+            //     }
+            //     , () => {
+            //         C = !1
+            //     }
+            // );
             k.length = 0;
             x = new Date
         }
