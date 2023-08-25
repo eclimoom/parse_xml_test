@@ -504,36 +504,23 @@ function Ed(a, b) {
 }
 
 function Fd(a, b, c) {
-    var d = "";
-    4 === a ? d = c ?
-        "fonts/2CDFA8_1_0-f013c61555aee95900727f890834f945.woff2" : b ?
-            "fonts/2CDFA8_0_0-dd704242fc957c5c311f96fb3b9a1bf4.woff2" :
-            "fonts/2CDFA8_2_0-c2ac893f0bf35c631294741d02dad2b7.woff2" : 5 === a ? d =
-        "fonts/regular-8970dfa7c444c9489c4319032f3159f8.woff2" : 2 === a && (b && !c && (d =
-        "fonts/2F3AD3_8_0-e835dd5dc9e570f8f3982d53fb740851.woff2"),
-    !b && c && (d = "fonts/2F3AD3_3_0-83f070773e1ee1f3141f67725fea2eb9.woff2"));
-    console.log('d', d);
-    return d
+
+        let fonts = [
+            "fonts/2CDFA8_1_0-f013c61555aee95900727f890834f945.woff2",
+            "fonts/2CDFA8_0_0-dd704242fc957c5c311f96fb3b9a1bf4.woff2",
+            "fonts/2CDFA8_2_0-c2ac893f0bf35c631294741d02dad2b7.woff2",
+            "fonts/regular-8970dfa7c444c9489c4319032f3159f8.woff2",
+            "fonts/2F3AD3_8_0-e835dd5dc9e570f8f3982d53fb740851.woff2",
+        "fonts/2F3AD3_3_0-83f070773e1ee1f3141f67725fea2eb9.woff2"]
+    return fonts[5];
 }
 
 function Rd(a, b, c, d, e) {
-    var f = 1 === c ? "soundslice" : 2 === c ? "proxima-nova" : 4 === c ? "ss-freight" : 5 === c ? "abeezee" : "times new roman,times,serif";
-    if (document.fonts) {
-        var g = Fd(c, !!d, !!e);
-        // 本地 少调一次用
-        console.log('todo: 本地 少调一次用', c, !!d, !!e);
-        g && !od[g] && (od[g] = !0,
-            (new FontFace(f, `url(${a.F}${g})`, {
-                style: e ? "italic" : "normal",
-                weight: d ? "bold" : "normal"
-            })).load().then(h => {
-                    document.fonts.add(h);
-                    nc("FONT_LOADED", c)
-                }
-            ))
-    }
-    a.A.font = (d ? "bold " : "") + (e ? "italic " : "") + b * a.C + "px " + f
+
+    // Set the font style for a specific context 'a.A'
+    a.A.font = '16.1296px ss-freight';
 }
+
 
 function K(a, b) {
     a.A.fillStyle = b
@@ -3677,7 +3664,7 @@ function Dm(a) {
 }
 
 function Fm(a, b) {
-    if (0 !== (a.ya.status & 1) || a.S) {
+    if (0 !== (a.ya.status=3 & 1) || a.S) {
         a.Fa = !1;
         if (a.S) {
             var c = a.S.A;
@@ -4336,7 +4323,7 @@ function En(a) {
     a.da = e;
     jm(b);
     Fm(a, !0);
-    h !== a.Y && zm(a, 42);
+    h !== a.Y && zm(aaa, 42);
     zm(a, 72)
 }
 
@@ -9867,7 +9854,7 @@ function hu(a) {
         c = f.S.A;
         e = f.M;
         d = nn(f);
-        f = --Mn(f);
+        f = Mn(f) - 1;
         var g;
         iu(a);
         if (e) {
@@ -15018,6 +15005,7 @@ class wx {
 function xx(a, b) {
     document.fonts.ready.then(() => {
         document.fonts.load("9px soundslice").then(c => {
+                console.log(c.length, 'c.length')
                     c.length ? (c = b.A,
                         vf(c.ya, 1),
                         Fm(c, !0)) : yx(b)
@@ -15051,12 +15039,12 @@ function Cx(a) {
         , g = tt("video-wrapper")
         , h = Ts(a, "video-container")
         , k = tt("video-sidebar")
-        , l = a.Z ? null : t("show-sidebar")
+        , l = a.Z ? null : tt("show-sidebar")
         , m = f.clientWidth;
     f = b.D.C ? b.D.C.aspectRatio() : Hr;
     !d && (600 > m || 3 === a.X) ? (d = b.A.H,
         (b.F.M = a.T) ? (b = a.Fa ? a.da : a.Ga,
-            c = a.S ? c.innerHeight - t("controlbar").clientHeight : t("notation-and-video-wrapper").clientHeight,
+            c = a.S ? c.innerHeight - tt("controlbar").clientHeight : tt("notation-and-video-wrapper").clientHeight,
             m = !1,
             B(e, "topvideo"),
             B(g, "narrow"),
@@ -17044,10 +17032,11 @@ function py(a) {
 
 class Ny {
     constructor(a, b, c) {
-        var d = soundslice.media_url
-            , e = soundslice.user_id
-            , f = soundslice.lang
-            , g = soundslice.i18n;
+        var d = soundslice.media_url;
+        var e = soundslice.user_id;
+        var f = soundslice.lang;
+        var g = soundslice.i18n;
+
         this.D = a;
         this.F = a.document;
         this.H = b;
@@ -17061,6 +17050,7 @@ class Ny {
         h.width = 10;
         h.height = 10;
         var m = this.A = new rx(c, new pf(this.F), new Hf(new Ee(b, d), new Ee(h, d)), d, e, f, g, !/Android|iPhone|iPad/.test(k), !l, l);
+
         this.N = Ts(this, "notationwide");
         this.La = zx++;
         this.M = this.ta = null;
@@ -17083,8 +17073,7 @@ class Ny {
         this.Ka = () => {
             Cx(this);
             this.ra = !1
-        }
-        ;
+        };
         this.pa = 0;
         this.Oa = () => {
             var r = this.A
@@ -17113,7 +17102,7 @@ class Ny {
                 appearance: JSON.stringify(oo(r.A)),
                 instruments: JSON.stringify(Yw(r))
             },
-                uc("POST", `/api/v1/slices/${r.C.F}/userstate/`, u, Ir, Ir))
+                    uc("POST", `/api/v1/slices/${r.C.F}/userstate/`, u, Ir, Ir))
         }
         ;
         this.ma = 1;
