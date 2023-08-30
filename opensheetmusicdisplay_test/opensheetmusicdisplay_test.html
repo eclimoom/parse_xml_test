@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./opensheetmusicdisplay/build/opensheetmusicdisplay.min.js"></script>
+</head>
+<body>
+
+<div class="">
+    <button class="next">
+        next
+    </button>
+</div>
+<div id="osmdContainer"></div>
+
+<script>
+
+    var osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay("osmdContainer");
+    osmd.setOptions({
+        backend: "svg",
+        drawTitle: true,
+        drawingParameters: "compacttight" // don't display title, composer etc., smaller margins
+    });
+    osmd
+        .load("./assets/2.musicxml")
+        // .load("./assets/14.mxl")
+        .then(
+            function() {
+                // osmd.graphic.measureList[0][0].staffEntries[0].graphicalVoiceEntries[0].boundingBox.relativePosition
+
+                // osmd.EngravingRules.RenderMeasureNumbersOnlyAtSystemStart = true;
+
+                osmd.render();
+                osmd.cursor.show();
+
+            }
+        );
+
+    $(function (){
+
+        // cursor.next();
+
+        $(".next").click(function (){
+            let cursor = osmd.cursor;
+            cursor.next();
+            const cursorVoiceEntry = cursor.Iterator.CurrentVoiceEntries[0];
+            const baseNote = cursorVoiceEntry.Notes[0];
+            // console.log("Stem direction of VoiceEntry under Cursor: " + StemDirectionType[cursorVoiceEntry.StemDirection]);
+            console.log("Stem direction of VoiceEntry under Cursor: ", cursorVoiceEntry);
+            console.log("base note of Voice Entry at second cursor position: " + baseNote.Pitch.ToString());
+        })
+    });
+</script>
+
+</body>
+</html>

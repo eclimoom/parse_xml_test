@@ -1,0 +1,26 @@
+{
+  "name": "parse_xml_test",
+  "version": "1.0.0",
+  "description": "https://www.verovio.org/index.xhtml A music notation engraving library Designed for the Music Encoding Initiative - Fast - Light - Flexible - No dependencies Verovio is a fast, portable and lightweight open-source library for engraving Music Encoding Initiative (MEI) music scores into SVG.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eclimoom/parse_xml_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eclimoom/parse_xml_test/issues"
+  },
+  "homepage": "https://github.com/eclimoom/parse_xml_test#readme",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "opensheetmusicdisplay": "^1.8.3"
+  }
+}
