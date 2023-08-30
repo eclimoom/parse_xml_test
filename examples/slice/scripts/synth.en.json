@@ -1,0 +1,444 @@
+{
+  "metronome": [
+    "soundfonts/metronome-e6739e8b5d2a3c2d848f8c58de84f848.oga",
+    "soundfonts/metronome-a2437015d9f697c570b8df5fce64e4a1.mp3"
+  ],
+  "percussion": [
+    "soundfonts/percussion-4057eab4ef9fb9cb413a975ddd38032d.oga",
+    "soundfonts/percussion-883625f4a0281883cbcf2def46f3a31e.mp3"
+  ],
+  "inst": [
+    [
+      "21",
+      "Accordion: Standard",
+      "soundfonts/accordion-66f3b618110c4a7688b874d7b99fc2f8.oga",
+      "soundfonts/accordion-020c4f735186d75e5ec7c4f959336dc6.mp3"
+    ],
+    [
+      "23",
+      "Accordion: Tango",
+      "soundfonts/accordion_tango-cf207628c842c5334942e552e86b08b8.oga",
+      "soundfonts/accordion_tango-c4b4e14f169adc167ad739fb94e51045.mp3"
+    ],
+    [
+      "109",
+      "Bagpipe",
+      "soundfonts/bagpipe-a8372b7da32121a99d448102b723a8e0.oga",
+      "soundfonts/bagpipe-44668563209aecca4012d3867e34deb2.mp3"
+    ],
+    [
+      "105",
+      "Banjo",
+      "soundfonts/banjo-73519cb77ac6955048c7cee9d3b9eb27.oga",
+      "soundfonts/banjo-457281574d1a8a435dde8c1b3138beef.mp3"
+    ],
+    [
+      "32",
+      "Bass: Acoustic",
+      "soundfonts/bass_acoustic-a355123068037d2898554b255acebe34.oga",
+      "soundfonts/bass_acoustic-9baa3bd090d9d392cf8394708acebb93.mp3"
+    ],
+    [
+      "33",
+      "Bass: Electric, fingered",
+      "soundfonts/elbassfinger-4685133821a2c3b4ec82bfbfff2f4c57.oga",
+      "soundfonts/elbassfinger-b9b9a9d12a9a88931bbcb562472c8c06.mp3"
+    ],
+    [
+      "34",
+      "Bass: Electric, picked",
+      "soundfonts/elbass_pick-137196e3c153bebacefd3753a4a4288e.oga",
+      "soundfonts/elbass_pick-c183b317a0d987b6496b7170533c93ed.mp3"
+    ],
+    [
+      "35",
+      "Bass: Fretless",
+      "soundfonts/bass_fretless-d46589d80d3a1519bcff8894ca3e1786.oga",
+      "soundfonts/bass_fretless-909eb6414f860f6372713ec6a8c196d1.mp3"
+    ],
+    [
+      "36",
+      "Bass: Slap 1",
+      "soundfonts/bass_slap1-8fc9f54e1fc04923ad6d66b780486c13.oga",
+      "soundfonts/bass_slap1-191c2d8139a04a5ed63f092e528d8ec9.mp3"
+    ],
+    [
+      "37",
+      "Bass: Slap 2",
+      "soundfonts/bass_slap2-75393b9a1d02d039defdb2d2933e4845.oga",
+      "soundfonts/bass_slap2-228e4f3d3b67c511a4e63f98d521da73.mp3"
+    ],
+    [
+      "38",
+      "Bass: Synth 1",
+      "soundfonts/bass_synth1-0646c859cca885ed43360a3dfa369fbc.oga",
+      "soundfonts/bass_synth1-de8ecf6a03777381f336da87cd8d88c5.mp3"
+    ],
+    [
+      "39",
+      "Bass: Synth 2",
+      "soundfonts/bass_synth2-e41d4c0fb68929f66545a7d0c2518f26.oga",
+      "soundfonts/bass_synth2-106a9474488b495ff55ebd060d2cfa9f.mp3"
+    ],
+    [
+      "70",
+      "Bassoon",
+      "soundfonts/bassoon-e2b4e4256cc0ad27c53dd5c66978a3a3.oga",
+      "soundfonts/bassoon-c2038f0dfc3f4b2f36fdcaf48a432972.mp3"
+    ],
+    [
+      "76",
+      "Blown bottle",
+      "soundfonts/blown_bottle-27594a80a80d162ea00e0e19c5dac1e4.oga",
+      "soundfonts/blown_bottle-877fa107ed2d01e51edace4433b719c0.mp3"
+    ],
+    [
+      "61",
+      "Brass section",
+      "soundfonts/brass_section-2a615b3fae7e3853eb04aa4129fde495.oga",
+      "soundfonts/brass_section-0de45a54ad09f7d338d1aadca417e36d.mp3"
+    ],
+    [
+      "8",
+      "Celesta",
+      "soundfonts/celesta-309c74316df93e5aae6548f8c5163d69.oga",
+      "soundfonts/celesta-3bd9237db1d1e97a9441d98f2f699ced.mp3"
+    ],
+    [
+      "42",
+      "Cello",
+      "soundfonts/cello-97a03537df09fc55dc3f7a7ee7e0aa3a.oga",
+      "soundfonts/cello-f164b153e6cf1e08d6072eaec19e82c4.mp3"
+    ],
+    [
+      "52",
+      "Choir aahs",
+      "soundfonts/choir_aah-09b351437b9e1be72c7fa89382a1f691.oga",
+      "soundfonts/choir_aah-4c2a34a1dd7e996603ab429a0a883d76.mp3"
+    ],
+    [
+      "53",
+      "Choir oohs",
+      "soundfonts/choir_ooh-fc6a71fc7fa8a279575896a8501e3a26.oga",
+      "soundfonts/choir_ooh-7c0c36f4ab45093ccfc173dae8232cc7.mp3"
+    ],
+    [
+      "71",
+      "Clarinet",
+      "soundfonts/clarinet-95091bc69f9df4bea747c14f72b726ea.oga",
+      "soundfonts/clarinet-b254ec191625d3bd88be736454cf28b7.mp3"
+    ],
+    [
+      "7",
+      "Clavinet",
+      "soundfonts/clavinet-400c95cd888b49525e20d66b377dd055.oga",
+      "soundfonts/clavinet-7856602478d0c19abe7e4f5cbd51c361.mp3"
+    ],
+    [
+      "15",
+      "Dulcimer",
+      "soundfonts/dulcimer-4b1fbccd2bbedbc09dadd55c4fbe958c.oga",
+      "soundfonts/dulcimer-f0862fa2354af4dab112f83b8b9af070.mp3"
+    ],
+    [
+      "69",
+      "English horn",
+      "soundfonts/english_horn-ecc66fb4369462d74288cb1f14a16754.oga",
+      "soundfonts/english_horn-9d720534a20cfd3c3de35fc5b5ccec79.mp3"
+    ],
+    [
+      "73",
+      "Flute",
+      "soundfonts/flute-f89cb7a34e9da73228988f644bb70732.oga",
+      "soundfonts/flute-cca3612b2c345f0be6736dbfc0884210.mp3"
+    ],
+    [
+      "60",
+      "French horn",
+      "soundfonts/french_horn-6567136bdda0f5a26078e945450dcdf4.oga",
+      "soundfonts/french_horn-e6b075107de855d899fb86c6ec336665.mp3"
+    ],
+    [
+      "9",
+      "Glockenspiel",
+      "soundfonts/glock-48dcc44cdecfc53e5fde2fbeb7a81cbb.oga",
+      "soundfonts/glock-d7892b20463d5e0efae84183cb972c2c.mp3"
+    ],
+    [
+      "24",
+      "Guitar: Acoustic nylon",
+      "soundfonts/gtr_nylon-6cd3f31b8f29f91ed7dee52e967f09c5.oga",
+      "soundfonts/gtr_nylon-1f70dc25962fb0fb5a0695eadfa1ca51.mp3"
+    ],
+    [
+      "25",
+      "Guitar: Acoustic steel",
+      "soundfonts/steelgtr-87ef5e16fdd3b4a650fab893ae09f689.oga",
+      "soundfonts/steelgtr-5aada0ad959a6b8bb4cc8900bd92e8a3.mp3"
+    ],
+    [
+      "27",
+      "Guitar: Electric clean",
+      "soundfonts/elgtr_clean-92c44f26a9112602a849f9f28e5604ef.oga",
+      "soundfonts/elgtr_clean-bc6aa869758d64a1af74ffcb6285bbe1.mp3"
+    ],
+    [
+      "30",
+      "Guitar: Electric distorted",
+      "soundfonts/distortgtr-e88ad2cd50fbd3ef16526dd1ba14f260.oga",
+      "soundfonts/distortgtr-93e0c13ccadca31d2775df4404e8cf7e.mp3"
+    ],
+    [
+      "26",
+      "Guitar: Electric jazz",
+      "soundfonts/elgtr_jazz-5e80a276854875865287af5b3fda5416.oga",
+      "soundfonts/elgtr_jazz-643179ae983819e5b5ba3d442e349e37.mp3"
+    ],
+    [
+      "28",
+      "Guitar: Electric muted",
+      "soundfonts/elmutedgtr-a9ef79b0f4bfe10acb25d0c6cc8376f5.oga",
+      "soundfonts/elmutedgtr-b8668e604b9c0ae3173faad5b9ee0a2b.mp3"
+    ],
+    [
+      "29",
+      "Guitar: Electric overdriven",
+      "soundfonts/elgtr_overdrive-5b7e0bf6e0c17c3b235a57550dabd459.oga",
+      "soundfonts/elgtr_overdrive-02c97e2f8956dce1dc336d034160c147.mp3"
+    ],
+    [
+      "31",
+      "Guitar harmonics",
+      "soundfonts/gtr_harmonics-10a27ed7c85c6a06025d3aba3faa4942.oga",
+      "soundfonts/gtr_harmonics-a9aa97480f0394d1ea32543fe8a3a51a.mp3"
+    ],
+    [
+      "22",
+      "Harmonica",
+      "soundfonts/harmonica-4939036857fff2d0e077a6819eab04e2.oga",
+      "soundfonts/harmonica-adb0dae5720caaad1c90693d9fb8a5da.mp3"
+    ],
+    [
+      "46",
+      "Harp",
+      "soundfonts/harp-ed379614cc0f09b6c9d7cc16cb316b6e.oga",
+      "soundfonts/harp-b89d5f1b49b1ba713845fea0b426d98f.mp3"
+    ],
+    [
+      "6",
+      "Harpsichord",
+      "soundfonts/harpsichord-6b887eae23b163c4d24ae8e1d51e5f14.oga",
+      "soundfonts/harpsichord-c9b71ade6273c04dda959563cd9bd0b0.mp3"
+    ],
+    [
+      "12",
+      "Marimba",
+      "soundfonts/marimba-068502e9f7f0cb106869debb087dd65e.oga",
+      "soundfonts/marimba-054bc3fb34fe2e1bebfff2a08ef60997.mp3"
+    ],
+    [
+      "10",
+      "Music box",
+      "soundfonts/musicbox-d8403ff89c8300a40dfe32fdf625e6e2.oga",
+      "soundfonts/musicbox-f3a24cd3fca47839510463fe2d3813cc.mp3"
+    ],
+    [
+      "68",
+      "Oboe",
+      "soundfonts/oboe-c386088e142b8b32b2c1702802512f0c.oga",
+      "soundfonts/oboe-566414059b7eccdce48be6dd953dfe60.mp3"
+    ],
+    [
+      "79",
+      "Ocarina",
+      "soundfonts/ocarina-c936b70dfa62a65099c51611bf78cf83.oga",
+      "soundfonts/ocarina-de1feb09ff813480d653d738bdfed794.mp3"
+    ],
+    [
+      "19",
+      "Organ: Church",
+      "soundfonts/organ_church-bc2e1842a3e7b9d483c3d9e7eaed28e5.oga",
+      "soundfonts/organ_church-75c224f1e1e314bca2674dcb267ff561.mp3"
+    ],
+    [
+      "16",
+      "Organ: Drawbar",
+      "soundfonts/organ_drawbar-af498be28cd3a0c00429bcfcec656db2.oga",
+      "soundfonts/organ_drawbar-90994efc6fec958f89a80e9025256dee.mp3"
+    ],
+    [
+      "17",
+      "Organ: Percussive",
+      "soundfonts/organ_percussive-2a2322c452584e9380d7e1c1795b6b48.oga",
+      "soundfonts/organ_percussive-0f4803039ba9a1743ba1891607bba5d8.mp3"
+    ],
+    [
+      "20",
+      "Organ: Reed",
+      "soundfonts/organ_reed-f278035f4f34e71e6e186dd7348dc52c.oga",
+      "soundfonts/organ_reed-1d3518bf154189a0465845a30eac8990.mp3"
+    ],
+    [
+      "18",
+      "Organ: Rock",
+      "soundfonts/organ_rock-87de279efa056babf4e519d606215fcc.oga",
+      "soundfonts/organ_rock-e46efdb6027dba907dff467c315e5081.mp3"
+    ],
+    [
+      "75",
+      "Pan flute",
+      "soundfonts/pan_flute-d010bdd63f85696b9b1e1c199197aaf5.oga",
+      "soundfonts/pan_flute-cc0358c44108f77ec14bbf4ec6422e90.mp3"
+    ],
+    [
+      "1",
+      "Piano: Bright",
+      "soundfonts/piano_bright-2ed5ef72aec9d9ba511b5bf980313b95.oga",
+      "soundfonts/piano_bright-ab8b4502db1feb18a1d96223fda5cae3.mp3"
+    ],
+    [
+      "4",
+      "Piano: Electric",
+      "soundfonts/piano_electric1-e88d91145c95c4b5d76652012daa7193.oga",
+      "soundfonts/piano_electric1-1474af9db58e0cefd6bfc0e9caba1a00.mp3"
+    ],
+    [
+      "2",
+      "Piano: Electric grand",
+      "soundfonts/piano_elecgrand-730bb74d7ddbb39a7192fa8d056ba5a1.oga",
+      "soundfonts/piano_elecgrand-4769d7afca7bb811b07d7c3e2f1a5378.mp3"
+    ],
+    [
+      "3",
+      "Piano: Honky tonk",
+      "soundfonts/piano_honkytonk-bee368955785159fe3b645620bfd2a72.oga",
+      "soundfonts/piano_honkytonk-5b14caadcad4754ba6140c091ff1411b.mp3"
+    ],
+    [
+      "0",
+      "Piano: Standard",
+      "soundfonts/piano-c7138e2d2a513c7d56df8dbf973171a8.oga",
+      "soundfonts/piano-72aea6a6af9b3d4b2157de9ff52ecab1.mp3"
+    ],
+    [
+      "72",
+      "Piccolo",
+      "soundfonts/piccolo-ef9e2098ef37b3b466f0450fd514e6b6.oga",
+      "soundfonts/piccolo-38e509b9c4f539043610df66ba488948.mp3"
+    ],
+    [
+      "74",
+      "Recorder",
+      "soundfonts/recorder-fa53d6991265a068974bd52cade4a656.oga",
+      "soundfonts/recorder-5951b725924fc912c3731d6af1b70409.mp3"
+    ],
+    [
+      "65",
+      "Saxophone: Alto",
+      "soundfonts/sax_alto-b1ecd86a293f81f9720ae39f5ecc329a.oga",
+      "soundfonts/sax_alto-ddfc4dd91a1cb6868b4388b67b67b674.mp3"
+    ],
+    [
+      "67",
+      "Saxophone: Baritone",
+      "soundfonts/sax_baritone-d0bc6df2d0225392801210675f33df09.oga",
+      "soundfonts/sax_baritone-89e61a8b9d193c4aaef5af0b19758577.mp3"
+    ],
+    [
+      "64",
+      "Saxophone: Soprano",
+      "soundfonts/sax_soprano-81b6df593ec6315bf637516bf42de76f.oga",
+      "soundfonts/sax_soprano-04e2be0bee74939ad4df5b484683a2d8.mp3"
+    ],
+    [
+      "66",
+      "Saxophone: Tenor",
+      "soundfonts/sax_tenor-990dabb53ffb85ea1453a4bdabe68a8d.oga",
+      "soundfonts/sax_tenor-dd1a42888302abe4949461c35bf9d8a6.mp3"
+    ],
+    [
+      "104",
+      "Sitar",
+      "soundfonts/sitar-4bfd5d1929802e3105c5e8208235cebb.oga",
+      "soundfonts/sitar-10fadc3a58ab217d4aad3f486b05615c.mp3"
+    ],
+    [
+      "45",
+      "Strings: Pizzicato",
+      "soundfonts/strings_pizzicato-bd4abc665370965d0942e763d5b04391.oga",
+      "soundfonts/strings_pizzicato-74da35af6eccf2bd5379c690b85330a2.mp3"
+    ],
+    [
+      "44",
+      "Strings: Tremolo",
+      "soundfonts/strings_tremolo-1434fd44ec7dd130415362e08d96142a.oga",
+      "soundfonts/strings_tremolo-9596f506a1f4d1374931e584250bc2c5.mp3"
+    ],
+    [
+      "47",
+      "Timpani",
+      "soundfonts/timpani-cd587f55d0c217f99b1c9994046cc58a.oga",
+      "soundfonts/timpani-a9a96db5ddf3f7320934134e896733d1.mp3"
+    ],
+    [
+      "57",
+      "Trombone",
+      "soundfonts/trombone-14d89c81354dfc1fc4fc4228d439afc5.oga",
+      "soundfonts/trombone-52928fced32f55e64140c1781c887b04.mp3"
+    ],
+    [
+      "56",
+      "Trumpet",
+      "soundfonts/trumpet-43e270cdcf80b1c916791cd21ec3193f.oga",
+      "soundfonts/trumpet-ff9d7cfc351bdac3f93ab1b8a20c5131.mp3"
+    ],
+    [
+      "58",
+      "Tuba",
+      "soundfonts/tuba-3adbd52216b17776d60078944fe36cf5.oga",
+      "soundfonts/tuba-bc1c1f550c9187858e18bfabbe48ebe9.mp3"
+    ],
+    [
+      "14",
+      "Tubular bells",
+      "soundfonts/tubularbells-4b89fd36be4fb7254df532a009da5270.oga",
+      "soundfonts/tubularbells-1dc3ecf8df634082636b0656579631e1.mp3"
+    ],
+    [
+      "241",
+      "Ukulele",
+      "soundfonts/ukulele-649bf6fe6af4c4d4c014b53a4488d7ee.oga",
+      "soundfonts/ukulele-9cb3bd3c955fb297ea386ff5a68ff94f.mp3"
+    ],
+    [
+      "11",
+      "Vibraphone",
+      "soundfonts/vibes-7968fa26c4d68bac400d558f38f0bff5.oga",
+      "soundfonts/vibes-c273b7478459170d409bbeeb6a875d68.mp3"
+    ],
+    [
+      "41",
+      "Viola",
+      "soundfonts/viola-631781c3c1bc7a393853312ca8708a46.oga",
+      "soundfonts/viola-f94f92ec917941b05bcd9ccc17dfc577.mp3"
+    ],
+    [
+      "40",
+      "Violin",
+      "soundfonts/violin-15fdde2c3d2daa7ea4b73375a307b8fe.oga",
+      "soundfonts/violin-1e5599a2914ec6196ed0093f53efc016.mp3"
+    ],
+    [
+      "78",
+      "Whistle",
+      "soundfonts/whistle-40e6b8bf85bb500491dd2916221ed6fc.oga",
+      "soundfonts/whistle-e39df9b34d88fabe4bebb40756898bc6.mp3"
+    ],
+    [
+      "13",
+      "Xylophone",
+      "soundfonts/xylophone-47c11c67ed10dd2045ca818e8af65374.oga",
+      "soundfonts/xylophone-b05b906d5298c5ae0d2446597972de89.mp3"
+    ]
+  ]
+}
